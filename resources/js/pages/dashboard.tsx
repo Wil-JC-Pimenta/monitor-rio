@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
+// import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
 import { dashboard } from '@/routes';
 import { type BreadcrumbItem } from '@/types';
@@ -43,9 +43,9 @@ export default function Dashboard() {
             const stats: RiverStats = {
                 total_stations: 5,
                 total_measurements: data.data?.length || 0,
-                max_nivel: Math.max(...(data.data?.map((d: any) => d.nivel || 0) || [0])),
-                max_vazao: Math.max(...(data.data?.map((d: any) => d.vazao || 0) || [0])),
-                critical_alerts: data.data?.filter((d: any) => d.nivel > 3.0).length || 0,
+                max_nivel: Math.max(...(data.data?.map((d: { nivel?: number }) => d.nivel || 0) || [0])),
+                max_vazao: Math.max(...(data.data?.map((d: { vazao?: number }) => d.vazao || 0) || [0])),
+                critical_alerts: data.data?.filter((d: { nivel?: number }) => d.nivel && d.nivel > 3.0).length || 0,
             };
             
             setRiverStats(stats);

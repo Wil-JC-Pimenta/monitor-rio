@@ -5,9 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { AlertTriangle, Droplets, Gauge, CloudRain, Activity } from 'lucide-react';
+import { AlertTriangle, Droplets, Gauge, Activity } from 'lucide-react';
 import { Line } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -39,13 +39,13 @@ interface RiverData {
     data_medicao: string;
 }
 
-interface Station {
-    id: number;
-    name: string;
-    code: string;
-    status: string;
-    last_measurement: string | null;
-}
+// interface Station {
+//     id: number;
+//     name: string;
+//     code: string;
+//     status: string;
+//     last_measurement: string | null;
+// }
 
 interface MonitorProps {
     recentData: RiverData[];
@@ -60,7 +60,16 @@ interface MonitorProps {
 
 export default function Monitor({ recentData, stats }: MonitorProps) {
     const [selectedStation, setSelectedStation] = useState<string>('all');
-    const [chartData, setChartData] = useState<any>(null);
+    const [chartData, setChartData] = useState<{
+        labels: string[];
+        datasets: Array<{
+            label: string;
+            data: (number | null)[];
+            borderColor: string;
+            backgroundColor: string;
+            yAxisID: string;
+        }>;
+    } | null>(null);
     const [loading, setLoading] = useState(false);
 
     const stations = [
@@ -74,7 +83,7 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
 
     useEffect(() => {
         fetchChartData();
-    }, [selectedStation]);
+    }, [selectedStation]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const fetchChartData = async () => {
         setLoading(true);
@@ -173,14 +182,14 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
         },
     };
 
-    const getStatusColor = (status: string) => {
-        switch (status) {
-            case 'active': return 'bg-green-500';
-            case 'inactive': return 'bg-red-500';
-            case 'maintenance': return 'bg-yellow-500';
-            default: return 'bg-gray-500';
-        }
-    };
+    // const getStatusColor = (status: string) => {
+    //     switch (status) {
+    //         case 'active': return 'bg-green-500';
+    //         case 'inactive': return 'bg-red-500';
+    //         case 'maintenance': return 'bg-yellow-500';
+    //         default: return 'bg-gray-500';
+    //     }
+    // };
 
     const getLevelStatus = (nivel: number | null) => {
         if (nivel === null) return { status: 'unknown', color: 'bg-gray-500', text: 'Sem dados' };
