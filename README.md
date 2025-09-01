@@ -156,9 +156,13 @@ php artisan serve
 
 ### Busca de Dados
 ```bash
+# Usar dados mock (recomendado para desenvolvimento)
+php artisan river:fetch --mock
+
+# Usar dados reais da API (requer chaves configuradas)
 php artisan river:fetch
 ```
-Comando para buscar dados da API da ANA (Agência Nacional de Águas).
+Comando para buscar dados da API da ANA (Agência Nacional de Águas) ou gerar dados mock para desenvolvimento.
 
 ### Outros Comandos Úteis
 ```bash
@@ -269,6 +273,8 @@ Para suporte e dúvidas:
 - ✅ **Testes**: 34/34 passando (97 assertions)
 - ✅ **CI/CD**: GitHub Actions configurado
 - ✅ **Dependências**: Todas instaladas e atualizadas
+- ✅ **Dados Mock**: Sistema funcionando com dados simulados
+- ⏳ **APIs Externas**: Aguardando liberação das chaves da ANA
 
 ---
 
