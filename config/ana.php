@@ -21,6 +21,22 @@ return [
     
     /*
     |--------------------------------------------------------------------------
+    | Autenticação ANA
+    |--------------------------------------------------------------------------
+    |
+    | Configurações de autenticação para a API da ANA
+    | Baseado na documentação oficial do Swagger
+    |
+    */
+    
+    'auth' => [
+        'identificador' => env('ANA_API_IDENTIFICADOR', ''),
+        'senha' => env('ANA_API_SENHA', ''),
+        'token_ttl' => env('ANA_TOKEN_TTL', 3600), // 1 hora
+    ],
+    
+    /*
+    |--------------------------------------------------------------------------
     | Estações do Rio Piracicaba no Vale do Aço
     |--------------------------------------------------------------------------
     |
@@ -65,10 +81,16 @@ return [
     */
     
     'endpoints' => [
-        'estacoes' => '/Estacoes',
-        'serie_historica' => '/HidroSerieHistorica',
-        'qualidade_agua' => '/QualidadeAgua',
-        'reservatorios' => '/Reservatorios',
+        'auth' => '/EstacoesTelemetricas/OAUth/v1',
+        'estacoes' => '/EstacoesTelemetricas/HidroInventarioEstacoes/v1',
+        'dados_telemetricos' => '/EstacoesTelemetricas/HidroinfoanaSerieTelemetricaAdotada/v2',
+        'dados_cotas' => '/EstacoesTelemetricas/HidroSerieCotas/v1',
+        'dados_vazao' => '/EstacoesTelemetricas/HidroSerieVazao/v1',
+        'dados_chuva' => '/EstacoesTelemetricas/HidroSerieChuva/v1',
+        'qualidade_agua' => '/EstacoesTelemetricas/HidroSerieQA/v1',
+        'rios' => '/EstacoesTelemetricas/HidroRio/v1',
+        'municipios' => '/EstacoesTelemetricas/HidroMunicipio/v1',
+        'bacias' => '/EstacoesTelemetricas/HidroBacia/v1',
     ],
     
     /*

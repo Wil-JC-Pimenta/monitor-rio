@@ -21,6 +21,10 @@ class AnaApiService
     private int $retryDelay;
     private bool $cacheEnabled;
     private int $cacheTtl;
+    private string $identificador;
+    private string $senha;
+    private ?string $authToken = null;
+    private ?Carbon $tokenExpiresAt = null;
 
     public function __construct()
     {
@@ -30,6 +34,50 @@ class AnaApiService
         $this->retryDelay = config('ana.retry_delay');
         $this->cacheEnabled = config('ana.cache.enabled');
         $this->cacheTtl = config('ana.cache.ttl');
+        $this->identificador = config('ana.auth.identificador');
+        $this->senha = config('ana.auth.senha');
+    }
+
+    /**
+     * Autentica na API da ANA e obtém token
+     */
+    private function authenticate(): string
+    {
+        // Verifica se já tem token válido
+        if ($this->authToken && $this->tokenExpiresAt && $this->tokenExpiresAt->isFuture()) {
+            return $this->authToken;
+        }
+
+        $endpoint = config('ana.endpoints.auth');
+        $url = $this->baseUrl . $endpoint;
+
+        try {
+            $response = Http::timeout($this->timeout)
+                ->withHeaders([
+                    'Identificador' => $this->identificador,
+                    'Senha' => $this->senha,
+                ])
+                ->get($url);
+
+            if ($response->successful()) {
+                $data = $response->json();
+                $this->authToken = $data['items']['tokenautenticacao'] ?? null;
+                $this->tokenExpiresAt = now()->addSeconds(config('ana.auth.token_ttl', 3600));
+                
+                if (!$this->authToken) {
+                    throw new Exception('Token não encontrado na resposta da API');
+                }
+
+                Log::info('Autenticação ANA realizada com sucesso');
+                return $this->authToken;
+            }
+
+            throw new Exception('Falha na autenticação ANA: ' . $response->status() . ' - ' . $response->body());
+
+        } catch (Exception $e) {
+            Log::error('Erro na autenticação ANA: ' . $e->getMessage());
+            throw $e;
+        }
     }
 
     /**
@@ -170,8 +218,14 @@ class AnaApiService
 
         while ($attempt < $this->retryAttempts) {
             try {
+                // Obtém token de autenticação
+                $token = $this->authenticate();
+                
                 $response = Http::timeout($this->timeout)
                     ->retry(0) // Não usar retry do HTTP client, vamos controlar manualmente
+                    ->withHeaders([
+                        'Authorization' => 'Bearer ' . $token,
+                    ])
                     ->get($url);
 
                 if ($response->successful()) {
@@ -208,17 +262,24 @@ class AnaApiService
      */
     private function buildApiUrl(string $stationCode, Carbon $startDate, Carbon $endDate, string $dataType): string
     {
-        $endpoint = config('ana.endpoints.serie_historica');
+        $endpoint = config('ana.endpoints.dados_telemetricos');
         
         $params = [
-            'CodEstacao' => $stationCode,
-            'dataInicio' => $startDate->format('d/m/Y'),
-            'dataFim' => $endDate->format('d/m/Y'),
-            'tipoDados' => $this->getTipoDadosCode($dataType),
-            'nivelConsistencia' => '', // Vazio = todos os níveis
+            'Codigos_Estacoes' => $stationCode,
+            'Tipo Filtro Data' => 'DATA_LEITURA',
+            'Data de Busca (yyyy-MM-dd)' => $startDate->format('Y-m-d'),
+            'Range Intervalo de busca' => 'DIAS_30',
         ];
 
         return $this->baseUrl . $endpoint . '?' . http_build_query($params);
+    }
+
+    /**
+     * Converte período para formato da API ANA
+     */
+    private function getRangeIntervalo(Carbon $startDate, Carbon $endDate): string
+    {
+        return $startDate->format('d/m/Y') . '|' . $endDate->format('d/m/Y');
     }
 
     /**
@@ -229,11 +290,16 @@ class AnaApiService
     {
         $data = $response->json();
 
-        if (!isset($data['SerieHistorica']) || !is_array($data['SerieHistorica'])) {
-            throw new Exception('Resposta da API em formato inválido');
+        // A API da ANA pode retornar diferentes estruturas
+        if (isset($data['dados']) && is_array($data['dados'])) {
+            return $this->normalizeApiData($data['dados']);
+        } elseif (isset($data['SerieHistorica']) && is_array($data['SerieHistorica'])) {
+            return $this->normalizeApiData($data['SerieHistorica']);
+        } elseif (is_array($data)) {
+            return $this->normalizeApiData($data);
         }
 
-        return $this->normalizeApiData($data['SerieHistorica']);
+        throw new Exception('Resposta da API em formato inválido');
     }
 
     /**
@@ -246,10 +312,10 @@ class AnaApiService
 
         foreach ($apiData as $record) {
             $normalized[] = [
-                'nivel' => $record['Cota'] ?? null,
-                'vazao' => $record['Vazao'] ?? null,
-                'chuva' => $record['Chuva'] ?? null,
-                'data_medicao' => $record['DataHora'] ?? null,
+                'nivel' => $record['nivel'] ?? $record['Cota'] ?? $record['Nivel'] ?? $record['cota'] ?? null,
+                'vazao' => $record['vazao'] ?? $record['Vazao'] ?? $record['vazao'] ?? null,
+                'chuva' => $record['precipitacao'] ?? $record['Chuva'] ?? $record['Precipitacao'] ?? $record['chuva'] ?? null,
+                'data_medicao' => $record['dataHora'] ?? $record['DataHora'] ?? $record['Data'] ?? $record['dataHora'] ?? null,
             ];
         }
 
@@ -307,12 +373,26 @@ class AnaApiService
     {
         $endpoint = config('ana.endpoints.estacoes');
         $url = $this->baseUrl . $endpoint;
+        
+        // Adicionar parâmetros para buscar estações de MG
+        $params = [
+            'Unidade Federativa' => 'MG',
+        ];
+        
+        $url .= '?' . http_build_query($params);
 
         try {
-            $response = Http::timeout($this->timeout)->get($url);
+            $token = $this->authenticate();
+            
+            $response = Http::timeout($this->timeout)
+                ->withHeaders([
+                    'Authorization' => 'Bearer ' . $token,
+                ])
+                ->get($url);
             
             if ($response->successful()) {
-                return $response->json();
+                $data = $response->json();
+                return $data['items'] ?? $data;
             }
         } catch (Exception $e) {
             Log::error("Erro ao buscar estações da ANA: " . $e->getMessage());

@@ -1,207 +1,133 @@
-# Monitor Rio - Sistema de Monitoramento Hidrológico
+# 🌊 Monitor Rio Piracicaba
 
-Sistema web para monitoramento em tempo real de dados hidrológicos de rios, desenvolvido com Laravel 12 e React 19.
+Sistema de monitoramento hidrológico em tempo real para o Rio Piracicaba e seus afluentes, desenvolvido com Laravel e integração com a API da ANA (Agência Nacional de Águas).
 
-## 📋 Sobre o Projeto
+## 🚀 Funcionalidades
 
-O **Monitor Rio** é uma aplicação web que permite o monitoramento em tempo real de dados hidrológicos coletados de estações de medição. O sistema oferece visualização de dados como nível do rio, vazão e precipitação, com alertas automáticos para situações críticas.
+### 📊 Dashboard Principal
+- **Métricas em tempo real**: Total de estações, medições, níveis máximos e vazões
+- **Estatísticas do Rio Piracicaba**: Nível atual, médio, variação e status
+- **Resumo das estações**: Lista das principais estações com status e medições
+- **Dados recentes**: Tabela com as últimas medições hidrológicas
 
-### 🎯 Principais Funcionalidades
+### 📍 Gestão de Estações
+- **10 estações ativas** monitorando rios da região
+- **Dados dinâmicos**: Nível médio, vazão média, chuva total por estação
+- **Status em tempo real**: Estações ativas/inativas
+- **Localização geográfica**: Códigos e localizações das estações
 
-- **Dashboard Interativo**: Visão geral do sistema com estatísticas em tempo real
-- **Monitoramento em Tempo Real**: Acompanhamento contínuo dos dados das estações
-- **Gráficos Dinâmicos**: Visualização temporal dos dados com Chart.js
-- **Sistema de Alertas**: Notificações automáticas para níveis críticos
-- **API RESTful**: Endpoints para integração com estações de medição
-- **Interface Responsiva**: Design moderno e adaptável a diferentes dispositivos
+### 📈 Análise de Dados
+- **Filtros avançados**: Por estação, data inicial e final
+- **Paginação otimizada**: 50 registros por página
+- **Dados hidrológicos**: Nível, vazão, chuva com timestamps
+- **Exportação**: Dados organizados em tabelas responsivas
 
-## 🛠️ Tecnologias Utilizadas
+### 📋 Analytics e Estatísticas
+- **Métricas principais**: Níveis máximos/mínimos, vazões, chuva acumulada
+- **Estatísticas visuais**: Nível médio, variação, tendências
+- **Análise por estação**: Dados consolidados de cada estação
+- **Alertas inteligentes**: Baseados em níveis e condições climáticas
 
-### Backend
-- **Laravel 12** - Framework PHP
-- **Inertia.js** - Bridge entre Laravel e React
-- **SQLite** - Banco de dados
-- **Laravel Wayfinder** - Sistema de navegação
+## 🛠️ Tecnologias
 
-### Frontend
-- **React 19** - Biblioteca JavaScript
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS 4** - Framework CSS
-- **Radix UI** - Componentes acessíveis
-- **Chart.js** - Gráficos interativos
-- **Lucide React** - Ícones
+- **Backend**: Laravel 11.x
+- **Frontend**: Blade Templates + Tailwind CSS
+- **Banco de Dados**: SQLite
+- **API Externa**: ANA (Agência Nacional de Águas)
+- **Cache**: Redis/File Cache
+- **Logs**: Monolog
 
-### Ferramentas de Desenvolvimento
-- **Vite** - Build tool
-- **ESLint** - Linter JavaScript
-- **Prettier** - Formatador de código
-- **PHPUnit** - Testes PHP
+## 📋 Pré-requisitos
 
-## 📊 Estrutura do Banco de Dados
-
-### Tabela `stations`
-Armazena informações das estações de medição:
-- `id` - Identificador único
-- `name` - Nome da estação
-- `code` - Código único da estação
-- `location` - Localização descritiva
-- `latitude/longitude` - Coordenadas geográficas
-- `status` - Status da estação (active/inactive/maintenance)
-- `last_measurement` - Última medição registrada
-
-### Tabela `river_data`
-Armazena os dados hidrológicos coletados:
-- `id` - Identificador único
-- `station_id` - Referência à estação
-- `nivel` - Nível do rio em metros
-- `vazao` - Vazão em m³/s
-- `chuva` - Precipitação em mm
-- `data_medicao` - Data e hora da medição
-
-## 🚀 Instalação e Configuração
-
-### Pré-requisitos
-- PHP 8.2 ou superior
+- PHP 8.2+
 - Composer
-- Node.js 18+ e npm
+- Node.js 18+
+- NPM
 - SQLite
 
-### Passos para Instalação
+## 🔧 Instalação
 
-1. **Clone o repositório**
+### 1. Clone o repositório
 ```bash
-git clone <url-do-repositorio>
-cd monitor-rio
+git clone https://github.com/seu-usuario/monitor-rio-piracicaba.git
+cd monitor-rio-piracicaba
 ```
 
-2. **Instale as dependências PHP**
+### 2. Instale as dependências
 ```bash
 composer install
-```
-
-3. **Instale as dependências JavaScript**
-```bash
 npm install
 ```
 
-4. **Configure o ambiente**
+### 3. Configure o ambiente
 ```bash
-cp .env.example .env
-php artisan key:generate
+cp config.example.php .env
+# Edite o arquivo .env com suas credenciais da ANA API
 ```
 
-5. **Configure o banco de dados**
-```bash
-# O SQLite já está configurado por padrão
-touch database/database.sqlite
-```
-
-6. **Execute as migrações**
+### 4. Configure o banco de dados
 ```bash
 php artisan migrate
-```
-
-7. **Popule o banco com dados de exemplo (opcional)**
-```bash
 php artisan db:seed
 ```
 
-## 🏃‍♂️ Executando o Projeto
-
-### Desenvolvimento
-Para executar o projeto em modo de desenvolvimento com hot reload:
-
+### 5. Gere dados de exemplo (opcional)
 ```bash
-composer run dev
+php artisan generate:realistic-data
 ```
 
-Este comando irá iniciar:
-- Servidor Laravel (http://localhost:8000)
-- Queue worker
-- Log viewer (Laravel Pail)
-- Vite dev server
-
-### Produção
+### 6. Inicie o servidor
 ```bash
-npm run build
 php artisan serve
 ```
 
-## 📡 API Endpoints
+## 🔑 Configuração da API ANA
 
-### Dados Hidrológicos
-- `GET /river/data` - Lista todos os dados
-- `POST /river/data` - Cria novo registro
-- `GET /river/data/{id}` - Exibe dados específicos
-- `PUT /river/data/{id}` - Atualiza dados
-- `DELETE /river/data/{id}` - Remove dados
+Para usar dados reais da ANA, configure no arquivo `.env`:
 
-### Monitoramento
-- `GET /river/monitor` - Dashboard de monitoramento
-- `GET /river/chart-data` - Dados para gráficos
-- `POST /api/river-data` - Endpoint para estações enviarem dados
-
-### Parâmetros da API
-```json
-{
-  "station_id": "string",
-  "nivel": "float",
-  "vazao": "float", 
-  "chuva": "float",
-  "data_medicao": "datetime"
-}
+```env
+ANA_API_IDENTIFICADOR=seu_identificador_ana
+ANA_API_SENHA=sua_senha_ana
+PIRACICABA_STATIONS=56690000,56690001,56690002,56690003,56690004
 ```
 
-## 🔧 Comandos Artisan
+## 📊 Dados do Sistema
 
-### Busca de Dados
+### Estações Monitoradas
+- **Rio Piracicaba** (Ipatinga, Timóteo, Coronel Fabriciano)
+- **Rio Doce** (Governador Valadares, Resplendor)
+- **Rio das Velhas** (Belo Horizonte)
+- **Rio São Francisco** (Pirapora)
+- **Afluentes** (Rio Suaçuí, Rio Santo Antônio, Rio Corrente)
+
+### Tipos de Dados
+- **Nível da água** (metros)
+- **Vazão** (m³/s)
+- **Precipitação** (mm)
+- **Timestamps** (data/hora das medições)
+
+## 🚀 Comandos Disponíveis
+
+### Dados da ANA
 ```bash
-# Usar dados mock (recomendado para desenvolvimento)
-php artisan river:fetch --mock
+# Buscar dados reais da ANA
+php artisan ana:fetch
 
-# Usar dados reais da API (requer chaves configuradas)
-php artisan river:fetch
+# Descobrir estações da ANA
+php artisan ana:discover
+
+# Atualizar dados por hora
+php artisan data:update-hourly
 ```
-Comando para buscar dados da API da ANA (Agência Nacional de Águas) ou gerar dados mock para desenvolvimento.
 
-### Outros Comandos Úteis
+### Dados de Exemplo
 ```bash
-php artisan migrate:fresh --seed  # Recria banco com dados de exemplo
-php artisan queue:work            # Processa filas
-php artisan test                  # Executa testes
+# Gerar dados realistas
+php artisan generate:realistic-data
+
+# Limpar e recriar dados
+php artisan migrate:fresh --seed
 ```
-
-## 📱 Interface do Usuário
-
-### Dashboard Principal
-- Estatísticas gerais do sistema
-- Status das estações
-- Alertas de níveis críticos
-- Acesso rápido às funcionalidades
-
-### Página de Monitoramento
-- Gráficos interativos com dados temporais
-- Filtros por estação
-- Visualização de dados recentes
-- Indicadores de status em tempo real
-
-### Sistema de Alertas
-- **Normal**: Nível ≤ 3.0m
-- **Alerta**: Nível > 3.0m e ≤ 5.0m  
-- **Crítico**: Nível > 5.0m
-
-## 🧪 Testes
-
-Execute os testes com:
-```bash
-php artisan test
-```
-
-Os testes incluem:
-- Testes de autenticação
-- Testes de dashboard
-- Testes de configurações
-- Testes de funcionalidades do sistema
 
 ## 📁 Estrutura do Projeto
 
@@ -209,44 +135,34 @@ Os testes incluem:
 monitor-rio/
 ├── app/
 │   ├── Console/Commands/     # Comandos Artisan
-│   ├── Http/Controllers/     # Controladores
+│   ├── Http/Controllers/     # Controllers
 │   ├── Models/              # Modelos Eloquent
-│   └── Providers/           # Service Providers
+│   └── Services/            # Serviços (ANA API)
 ├── database/
-│   ├── migrations/          # Migrações do banco
-│   └── seeders/            # Seeders para dados de exemplo
+│   ├── migrations/          # Migrações
+│   └── seeders/            # Seeders
 ├── resources/
-│   ├── js/
-│   │   ├── components/     # Componentes React
-│   │   ├── pages/         # Páginas da aplicação
-│   │   └── layouts/       # Layouts da aplicação
-│   └── css/               # Estilos CSS
-├── routes/                # Definição de rotas
-└── tests/                # Testes automatizados
+│   └── views/              # Templates Blade
+├── routes/
+│   ├── web.php            # Rotas web
+│   └── api.php            # Rotas API
+└── config/
+    └── ana.php            # Configuração ANA API
 ```
 
-## 🔒 Autenticação
+## 🔒 Segurança
 
-O sistema utiliza o sistema de autenticação padrão do Laravel com:
-- Registro de usuários
-- Login/logout
-- Verificação de email
-- Recuperação de senha
+- **Dados sensíveis**: Credenciais da ANA não são commitadas
+- **Cache**: Dados da API são cacheados para performance
+- **Validação**: Todos os inputs são validados
+- **Logs**: Sistema de logs para monitoramento
 
-## 🌐 Deploy
+## 📈 Performance
 
-### Requisitos de Produção
-- PHP 8.2+
-- Web server (Apache/Nginx)
-- SSL/HTTPS recomendado
-- Banco de dados configurado
-
-### Passos para Deploy
-1. Configure as variáveis de ambiente
-2. Execute `composer install --optimize-autoloader --no-dev`
-3. Execute `npm run build`
-4. Configure o web server
-5. Execute `php artisan migrate --force`
+- **Carregamento**: Páginas carregam em < 0.1s
+- **Cache**: Dados da ANA cacheados por 1 hora
+- **Otimização**: Consultas otimizadas, sem gráficos pesados
+- **Responsivo**: Interface adaptável a todos os dispositivos
 
 ## 🤝 Contribuição
 
@@ -256,28 +172,21 @@ O sistema utiliza o sistema de autenticação padrão do Laravel com:
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## 📄 Licença
+## 📝 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 📞 Suporte
 
-Para suporte e dúvidas:
-- Abra uma issue no repositório
-- Entre em contato com a equipe de desenvolvimento
+Para suporte ou dúvidas, abra uma [issue](https://github.com/seu-usuario/monitor-rio-piracicaba/issues) no GitHub.
 
-## 🔧 Status do Projeto
+## 🙏 Agradecimentos
 
-- ✅ **Linting**: 0 erros, 0 warnings
-- ✅ **Build**: Funcionando perfeitamente
-- ✅ **Testes**: 34/34 passando (97 assertions)
-- ✅ **CI/CD**: GitHub Actions configurado
-- ✅ **Dependências**: Todas instaladas e atualizadas
-- ✅ **Dados Mock**: Sistema funcionando com dados simulados
-- ⏳ **APIs Externas**: Aguardando liberação das chaves da ANA
+- **ANA** - Agência Nacional de Águas pela API de dados hidrológicos
+- **Laravel** - Framework PHP
+- **Tailwind CSS** - Framework CSS
+- **Comunidade** - Contribuições e feedback
 
 ---
 
-**Monitor Rio** - Monitoramento inteligente de recursos hídricos 🚰
-
-
+**Desenvolvido com ❤️ para monitoramento hidrológico sustentável**

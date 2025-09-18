@@ -20,4 +20,10 @@ class RiverData extends Model
 
     // Laravel vai tratar esse campo como objeto Carbon (data/hora)
     protected $dates = ['data_medicao'];
+
+    // Relacionamento com Station
+    public function station()
+    {
+        return $this->belongsTo(Station::class);
+    }
 }

@@ -3,23 +3,19 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\RiverDataController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\StationController;
+use App\Http\Controllers\DataController;
+use App\Http\Controllers\AnalyticsController;
 
-Route::get('/', function () {
-    return Inertia::render('Dashboard');
-})->name('home');
-
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
-
-    // Rotas do sistema de monitoramento do rio
-    Route::prefix('river')->name('river.')->group(function () {
-        Route::get('monitor', [RiverDataController::class, 'monitor'])->name('monitor');
-        Route::resource('data', RiverDataController::class);
-        Route::get('chart-data', [RiverDataController::class, 'chartData'])->name('chart-data');
-    });
-});
+Route::get('/', [DashboardController::class, 'index'])->name('home');
+Route::get('/stations', [StationController::class, 'index'])->name('stations');
+Route::get('/data', [DataController::class, 'index'])->name('data');
+Route::get('/analytics', [AnalyticsController::class, 'index'])->name('analytics');
+Route::get('/analytics-simple', function () {
+    return view('analytics-simple');
+})->name('analytics-simple');
+Route::get('/analytics-test', [AnalyticsController::class, 'index'])->name('analytics-test');
 
 // API endpoints para estações
 Route::prefix('api')->name('api.')->group(function () {
