@@ -5,7 +5,7 @@ use Inertia\Inertia;
 use App\Http\Controllers\RiverDataController;
 
 Route::get('/', function () {
-    return Inertia::render('welcome');
+    return Inertia::render('Dashboard');
 })->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {

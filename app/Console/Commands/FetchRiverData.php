@@ -2,20 +2,35 @@
 
 namespace App\Console\Commands;
 
+use App\Services\AnaApiService;
+use Carbon\Carbon;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Http;
-use App\Models\RiverData;
-use App\Models\Station;
+use Illuminate\Support\Facades\Log;
 
 class FetchRiverData extends Command
 {
-    protected $signature = 'river:fetch {--mock : Use mock data instead of real API}';
-    protected $description = 'Busca dados hidrológicos e salva no banco (com suporte a dados mock)';
+    protected $signature = 'river:fetch 
+                            {--mock : Use mock data instead of real API}
+                            {--station= : Specific station code to fetch}
+                            {--days=7 : Number of days to fetch data for}
+                            {--type=niveis : Type of data (niveis, vazoes, chuvas)}';
+    
+    protected $description = 'Busca dados hidrológicos da ANA e salva no banco de dados';
+
+    private AnaApiService $anaService;
+
+    public function __construct(AnaApiService $anaService)
+    {
+        parent::__construct();
+        $this->anaService = $anaService;
+    }
 
     public function handle()
     {
-        if ($this->option('mock') || config('app.use_mock_data', true)) {
-            $this->info('Usando dados mock (aguardando liberação das chaves da API)...');
+        $this->info('🌊 Iniciando busca de dados hidrológicos...');
+
+        if ($this->option('mock')) {
+            $this->info('📊 Usando dados mock para demonstração...');
             $this->generateMockData();
         } else {
             $this->fetchRealData();
@@ -24,17 +39,18 @@ class FetchRiverData extends Command
 
     private function generateMockData()
     {
+        $this->info('📊 Gerando dados mock para demonstração...');
+        
+        // Gerar dados mock diretamente
         $stations = [
-            ['code' => 'RDV001', 'name' => 'Rio das Velhas - BH'],
-            ['code' => 'RSF001', 'name' => 'Rio São Francisco - Pirapora'],
-            ['code' => 'RD001', 'name' => 'Rio Doce - GV'],
-            ['code' => 'RPS001', 'name' => 'Rio Paraíba do Sul - JF'],
-            ['code' => 'RG001', 'name' => 'Rio Grande - Divinópolis'],
+            ['code' => 'PIR001', 'name' => 'Rio Piracicaba - Ipatinga'],
+            ['code' => 'PIR002', 'name' => 'Rio Piracicaba - Timóteo'],
+            ['code' => 'PIR003', 'name' => 'Rio Piracicaba - Coronel Fabriciano'],
         ];
 
         foreach ($stations as $stationData) {
             // Criar ou atualizar estação
-            $station = Station::firstOrCreate(
+            $station = \App\Models\Station::firstOrCreate(
                 ['code' => $stationData['code']],
                 [
                     'name' => $stationData['name'],
@@ -48,78 +64,93 @@ class FetchRiverData extends Command
             for ($i = 0; $i < 24; $i++) {
                 $measurementTime = now()->subHours($i);
                 
-                // Simular variações realistas
-                $baseNivel = 2.0 + (sin($i * 0.5) * 0.8);
-                $baseVazao = 150 + (cos($i * 0.3) * 50);
-                $baseChuva = $i < 6 ? rand(0, 5) : 0; // Chuva simulada nas primeiras 6 horas
+                // Simular variações realistas do Rio Piracicaba
+                $baseNivel = 2.5 + (sin($i * 0.3) * 0.5);
+                $baseVazao = 120 + (cos($i * 0.2) * 30);
+                $baseChuva = $i < 8 ? rand(0, 3) : 0; // Chuva simulada nas primeiras 8 horas
 
-                RiverData::create([
+                \App\Models\RiverData::create([
                     'station_id' => $station->id,
-                    'nivel' => round($baseNivel + (rand(-20, 20) / 100), 2),
-                    'vazao' => round($baseVazao + (rand(-30, 30)), 1),
+                    'nivel' => round($baseNivel + (rand(-15, 15) / 100), 2),
+                    'vazao' => round($baseVazao + (rand(-20, 20)), 1),
                     'chuva' => $baseChuva,
                     'data_medicao' => $measurementTime,
                 ]);
             }
 
-            $this->info("Dados mock gerados para estação: {$station->name}");
+            $this->info("✅ Dados mock gerados para: {$station->name}");
         }
-
-        $this->info('✅ Dados mock gerados com sucesso!');
-        $this->line('💡 Para usar dados reais, execute: php artisan river:fetch --no-mock');
+        
+        $this->info('🎉 Dados mock gerados com sucesso!');
+        $this->line('💡 Para usar dados reais da ANA, execute: php artisan river:fetch');
     }
 
     private function fetchRealData()
     {
-        $stationId = config('app.ana_station_id', '56690000');
-        $apiUrl = config('app.ana_api_url', 'http://api.ana.gov.br');
-        $apiKey = config('app.ana_api_key');
+        $days = (int) $this->option('days');
+        $dataType = $this->option('type');
+        $specificStation = $this->option('station');
+        
+        $startDate = now()->subDays($days);
+        $endDate = now();
 
-        if (!$apiKey) {
-            $this->error('❌ Chave da API da ANA não configurada!');
-            $this->line('💡 Configure ANA_API_KEY no arquivo .env ou use --mock para dados simulados');
-            return;
-        }
-
-        $this->info("Buscando dados da estação $stationId...");
+        $this->info("📅 Período: {$startDate->format('d/m/Y')} a {$endDate->format('d/m/Y')}");
+        $this->info("📊 Tipo de dados: {$dataType}");
 
         try {
-            $response = Http::withHeaders([
-                'Authorization' => 'Bearer ' . $apiKey,
-                'Accept' => 'application/json',
-            ])->get("$apiUrl/dados", [
-                'codEstacao' => $stationId,
-                'dataInicio' => now()->subDay()->format('d/m/Y'),
-                'dataFim' => now()->format('d/m/Y')
-            ]);
-
-            if ($response->successful()) {
-                $dados = $response->json();
-                
-                if (empty($dados)) {
-                    $this->warn('Nenhum dado retornado pela API');
-                    return;
-                }
-
-                foreach ($dados as $registro) {
-                    RiverData::create([
-                        'station_id' => $stationId,
-                        'nivel' => $registro['Nivel'] ?? null,
-                        'vazao' => $registro['Vazao'] ?? null,
-                        'chuva' => $registro['Chuva'] ?? null,
-                        'data_medicao' => $registro['DataHora'] ?? now()
-                    ]);
-                }
-
-                $this->info('✅ Dados do rio atualizados com sucesso!');
+            if ($specificStation) {
+                $this->fetchSpecificStation($specificStation, $startDate, $endDate, $dataType);
             } else {
-                $this->error('❌ Erro ao buscar dados da ANA: ' . $response->status());
-                $this->line('💡 Use --mock para dados simulados enquanto aguarda a liberação das chaves');
+                $this->fetchAllPiracicabaStations($startDate, $endDate, $dataType);
             }
         } catch (\Exception $e) {
-            $this->error('❌ Erro na requisição: ' . $e->getMessage());
-            $this->line('💡 Use --mock para dados simulados');
+            $this->error("❌ Erro na busca de dados: " . $e->getMessage());
+            Log::error("Erro no comando FetchRiverData: " . $e->getMessage());
+            
+            $this->line('💡 Use --mock para dados simulados ou verifique a configuração da API');
         }
+    }
+
+    private function fetchSpecificStation(string $stationCode, Carbon $startDate, Carbon $endDate, string $dataType): void
+    {
+        $this->info("🔍 Buscando dados da estação: {$stationCode}");
+
+        $data = $this->anaService->fetchStationData($stationCode, $startDate, $endDate, $dataType);
+
+        if ($data) {
+            $savedCount = $this->anaService->saveDataToDatabase($data, $stationCode);
+            $this->info("✅ Salvos {$savedCount} registros para a estação {$stationCode}");
+        } else {
+            $this->warn("⚠️ Nenhum dado encontrado para a estação {$stationCode}");
+        }
+    }
+
+    private function fetchAllPiracicabaStations(Carbon $startDate, Carbon $endDate, string $dataType): void
+    {
+        $this->info("🌊 Buscando dados de todas as estações do Rio Piracicaba...");
+
+        $stations = config('ana.stations.piracicaba.codes');
+        $totalSaved = 0;
+
+        foreach ($stations as $stationCode) {
+            $this->line("🔍 Processando estação: {$stationCode}");
+            
+            try {
+                $data = $this->anaService->fetchStationData($stationCode, $startDate, $endDate, $dataType);
+                
+                if ($data) {
+                    $savedCount = $this->anaService->saveDataToDatabase($data, $stationCode);
+                    $totalSaved += $savedCount;
+                    $this->info("  ✅ {$savedCount} registros salvos");
+                } else {
+                    $this->warn("  ⚠️ Nenhum dado encontrado");
+                }
+            } catch (\Exception $e) {
+                $this->error("  ❌ Erro: " . $e->getMessage());
+            }
+        }
+
+        $this->info("🎉 Processamento concluído! Total de registros salvos: {$totalSaved}");
     }
 }
 
