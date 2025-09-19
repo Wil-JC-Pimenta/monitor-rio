@@ -35,7 +35,11 @@ O Monitor Rio Piracicaba é uma aplicação web que coleta, processa e visualiza
 
 Assista ao vídeo demonstrativo da aplicação para ver todas as funcionalidades em ação:
 
-[![Vídeo de Demonstração](assets/videos/demo-aplicacao.mkv)](assets/videos/demo-aplicacao.mkv)
+[![Vídeo de Demonstração no YouTube](https://img.youtube.com/vi/3F1Mv8auoHs/maxresdefault.jpg)](https://youtu.be/3F1Mv8auoHs)
+
+**📺 [Assistir no YouTube](https://youtu.be/3F1Mv8auoHs)**
+
+*Também disponível localmente: [assets/videos/demo-aplicacao.mkv](assets/videos/demo-aplicacao.mkv)*
 
 **Conteúdo do vídeo:**
 - 🏠 **Dashboard Principal**: Visão geral das estações e dados em tempo real
