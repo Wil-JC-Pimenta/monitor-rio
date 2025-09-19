@@ -55,53 +55,62 @@
                 </div>
             </div>
 
-            <!-- Estatísticas do Rio Piracicaba -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div class="bg-white rounded-lg shadow p-6">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-4">Rio Piracicaba - Estatísticas</h2>
-                    <div class="space-y-4">
+        <!-- Estatísticas do Rio Piracicaba -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Rio Piracicaba - Estatísticas</h2>
+                <div class="space-y-4">
+                    @if($piracicabaData->count() > 0)
                         @php
-                            $piracicabaStations = $stations->filter(function($station) {
-                                return strpos(strtolower($station->name), 'piracicaba') !== false;
-                            });
-                            $piracicabaData = $recentData->filter(function($record) {
-                                return strpos(strtolower($record->station->name), 'piracicaba') !== false;
-                            });
+                            $avgNivel = $piracicabaData->avg('nivel') ?: 0;
+                            $maxNivel = $piracicabaData->max('nivel') ?: 0;
+                            $minNivel = $piracicabaData->min('nivel') ?: 0;
+                            $lastRecord = $piracicabaData->first();
+                            $avgVazao = $piracicabaData->avg('vazao') ?: 0;
+                            $maxVazao = $piracicabaData->max('vazao') ?: 0;
                         @endphp
                         
-                        @if($piracicabaData->count() > 0)
-                            @php
-                                $avgNivel = $piracicabaData->avg('nivel') ?: 0;
-                                $maxNivel = $piracicabaData->max('nivel') ?: 0;
-                                $minNivel = $piracicabaData->min('nivel') ?: 0;
-                                $lastRecord = $piracicabaData->first();
-                            @endphp
-                            
-                            <div class="space-y-3">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-600">Nível Atual:</span>
-                                    <span class="text-2xl font-bold text-blue-600">{{ number_format($lastRecord->nivel, 2) }}m</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-600">Nível Médio:</span>
-                                    <span class="text-lg font-semibold text-green-600">{{ number_format($avgNivel, 2) }}m</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-600">Variação:</span>
-                                    <span class="text-lg font-semibold text-purple-600">{{ number_format($maxNivel - $minNivel, 2) }}m</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-gray-600">Status:</span>
-                                    <span class="text-lg font-semibold {{ $lastRecord->nivel > 2.5 ? 'text-red-600' : ($lastRecord->nivel > 1.5 ? 'text-yellow-600' : 'text-green-600') }}">
-                                        {{ $lastRecord->nivel > 2.5 ? 'Alto' : ($lastRecord->nivel > 1.5 ? 'Médio' : 'Normal') }}
-                                    </span>
-                                </div>
+                        <div class="space-y-3">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Nível Atual:</span>
+                                <span class="text-2xl font-bold text-blue-600">{{ number_format($lastRecord->nivel, 2) }}m</span>
                             </div>
-                        @else
-                            <p class="text-gray-500">Dados do Rio Piracicaba não disponíveis</p>
-                        @endif
-                    </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Nível Médio:</span>
+                                <span class="text-lg font-semibold text-green-600">{{ number_format($avgNivel, 2) }}m</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Variação:</span>
+                                <span class="text-lg font-semibold text-purple-600">{{ number_format($maxNivel - $minNivel, 2) }}m</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Vazão Média:</span>
+                                <span class="text-lg font-semibold text-indigo-600">{{ number_format($avgVazao, 1) }} m³/s</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600">Status:</span>
+                                <span class="text-lg font-semibold {{ $lastRecord->nivel > 2.5 ? 'text-red-600' : ($lastRecord->nivel > 1.5 ? 'text-yellow-600' : 'text-green-600') }}">
+                                    {{ $lastRecord->nivel > 2.5 ? 'Alto' : ($lastRecord->nivel > 1.5 ? 'Médio' : 'Normal') }}
+                                </span>
+                            </div>
+                        </div>
+                    @else
+                        <p class="text-gray-500">Dados do Rio Piracicaba não disponíveis</p>
+                    @endif
                 </div>
+            </div>
+            
+            <!-- Gráfico Linear do Rio Piracicaba -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">Gráfico de Nível - Últimas 24h</h2>
+                @if($chartData->count() > 0)
+                    <div class="relative h-64">
+                        <canvas id="piracicabaChart"></canvas>
+                    </div>
+                @else
+                    <p class="text-gray-500 text-center py-8">Dados insuficientes para o gráfico</p>
+                @endif
+            </div>
 
                 <div class="bg-white rounded-lg shadow p-6">
                     <h2 class="text-xl font-semibold text-gray-900 mb-4">Resumo das Estações</h2>
@@ -172,6 +181,123 @@
             </div>
         </div>
     </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+        // Gráfico do Rio Piracicaba
+        @if($chartData->count() > 0)
+        const ctx = document.getElementById('piracicabaChart').getContext('2d');
+        const chartData = @json($chartData);
+        
+        // Preparar dados para o gráfico
+        const labels = chartData.map(item => {
+            const date = new Date(item.data_medicao);
+            return date.toLocaleTimeString('pt-BR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+        });
+        
+        const nivelData = chartData.map(item => item.nivel);
+        const vazaoData = chartData.map(item => item.vazao);
+        
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Nível (m)',
+                        data: nivelData,
+                        borderColor: 'rgb(59, 130, 246)',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Vazão (m³/s)',
+                        data: vazaoData,
+                        borderColor: 'rgb(16, 185, 129)',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Horário'
+                        }
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        title: {
+                            display: true,
+                            text: 'Nível (m)'
+                        },
+                        grid: {
+                            color: 'rgba(59, 130, 246, 0.1)'
+                        }
+                    },
+                    y1: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        title: {
+                            display: true,
+                            text: 'Vazão (m³/s)'
+                        },
+                        grid: {
+                            drawOnChartArea: false,
+                            color: 'rgba(16, 185, 129, 0.1)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += context.parsed.y.toFixed(2);
+                                    if (context.dataset.label.includes('Nível')) {
+                                        label += 'm';
+                                    } else if (context.dataset.label.includes('Vazão')) {
+                                        label += ' m³/s';
+                                    }
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        @endif
+    </script>
 
 </body>
 </html>
