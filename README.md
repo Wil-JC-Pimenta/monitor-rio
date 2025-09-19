@@ -29,6 +29,41 @@ O Monitor Rio Piracicaba é uma aplicação web que coleta, processa e visualiza
 - **Alertas Inteligentes**: Sistema de alertas baseado em níveis críticos
 - **Escalabilidade**: Arquitetura preparada para múltiplas estações e rios
 
+## 🎬 Demonstração
+
+### Vídeo de Apresentação
+
+Assista ao vídeo demonstrativo da aplicação para ver todas as funcionalidades em ação:
+
+[![Vídeo de Demonstração](assets/videos/demo-aplicacao.mkv)](assets/videos/demo-aplicacao.mkv)
+
+**Conteúdo do vídeo:**
+- 🏠 **Dashboard Principal**: Visão geral das estações e dados em tempo real
+- 📊 **Gráficos Interativos**: Visualização de níveis, vazões e chuvas
+- 📍 **Mapa de Estações**: Localização geográfica das estações monitoradas
+- 📈 **Análises e Estatísticas**: Relatórios detalhados e tendências
+- ⚙️ **Configurações**: Gerenciamento de estações e alertas
+- 🔄 **Atualização Automática**: Coleta de dados da API da ANA
+
+### Screenshots
+
+<details>
+<summary>📸 Ver Screenshots da Aplicação</summary>
+
+#### Dashboard Principal
+![Dashboard](assets/screenshots/dashboard.png)
+
+#### Página de Estações
+![Estações](assets/screenshots/stations.png)
+
+#### Análises e Gráficos
+![Análises](assets/screenshots/analytics.png)
+
+#### Dados Detalhados
+![Dados](assets/screenshots/data.png)
+
+</details>
+
 ## 🏗️ Arquitetura do Sistema
 
 ### Padrão Arquitetural
