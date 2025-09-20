@@ -38,7 +38,7 @@ export default function Dashboard() {
         try {
             const response = await fetch('/river/chart-data?days=1');
             const data = await response.json();
-            
+
             // Simular estatísticas baseadas nos dados
             const stats: RiverStats = {
                 total_stations: 5,
@@ -47,7 +47,7 @@ export default function Dashboard() {
                 max_vazao: Math.max(...(data.data?.map((d: { vazao?: number }) => d.vazao || 0) || [0])),
                 critical_alerts: data.data?.filter((d: { nivel?: number }) => d.nivel && d.nivel > 3.0).length || 0,
             };
-            
+
             setRiverStats(stats);
         } catch (error) {
             console.error('Erro ao buscar estatísticas:', error);
@@ -60,14 +60,11 @@ export default function Dashboard() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
-                
                 {/* Header do Dashboard */}
                 <div className="flex items-center justify-between">
                     <div>
                         <h1 className="text-2xl font-bold">Dashboard</h1>
-                        <p className="text-muted-foreground">
-                            Visão geral do sistema de monitoramento
-                        </p>
+                        <p className="text-muted-foreground">Visão geral do sistema de monitoramento</p>
                     </div>
                     <Link href="/river/monitor">
                         <Button>
@@ -82,60 +79,48 @@ export default function Dashboard() {
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Estações Ativas</CardTitle>
-                            <MapPin className="h-4 w-4 text-muted-foreground" />
+                            <MapPin className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
-                            <div className="text-2xl font-bold">
-                                {loading ? '...' : riverStats?.total_stations || 0}
-                            </div>
-                            <p className="text-xs text-muted-foreground">
-                                Estações hidrológicas
-                            </p>
+                            <div className="text-2xl font-bold">{loading ? '...' : riverStats?.total_stations || 0}</div>
+                            <p className="text-muted-foreground text-xs">Estações hidrológicas</p>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Total de Medições</CardTitle>
-                            <Activity className="h-4 w-4 text-muted-foreground" />
+                            <Activity className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
-                            <div className="text-2xl font-bold">
-                                {loading ? '...' : riverStats?.total_measurements || 0}
-                            </div>
-                            <p className="text-xs text-muted-foreground">
-                                Registros coletados
-                            </p>
+                            <div className="text-2xl font-bold">{loading ? '...' : riverStats?.total_measurements || 0}</div>
+                            <p className="text-muted-foreground text-xs">Registros coletados</p>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Nível Máximo</CardTitle>
-                            <Droplets className="h-4 w-4 text-muted-foreground" />
+                            <Droplets className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">
                                 {loading ? '...' : riverStats?.max_nivel ? `${riverStats.max_nivel.toFixed(2)}m` : 'N/A'}
                             </div>
-                            <p className="text-xs text-muted-foreground">
-                                Altura máxima registrada
-                            </p>
+                            <p className="text-muted-foreground text-xs">Altura máxima registrada</p>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Vazão Máxima</CardTitle>
-                            <Gauge className="h-4 w-4 text-muted-foreground" />
+                            <Gauge className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">
                                 {loading ? '...' : riverStats?.max_vazao ? `${riverStats.max_vazao.toFixed(1)}m³/s` : 'N/A'}
                             </div>
-                            <p className="text-xs text-muted-foreground">
-                                Fluxo máximo registrado
-                            </p>
+                            <p className="text-muted-foreground text-xs">Fluxo máximo registrado</p>
                         </CardContent>
                     </Card>
                 </div>
@@ -145,7 +130,7 @@ export default function Dashboard() {
                     <Alert>
                         <AlertTriangle className="h-4 w-4" />
                         <AlertDescription>
-                            <strong>Alerta:</strong> {riverStats.critical_alerts} estação(ões) com níveis críticos. 
+                            <strong>Alerta:</strong> {riverStats.critical_alerts} estação(ões) com níveis críticos.
                             <Link href="/river/monitor" className="ml-2 underline">
                                 Ver detalhes
                             </Link>
@@ -155,59 +140,47 @@ export default function Dashboard() {
 
                 {/* Cards de Acesso Rápido */}
                 <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                    <Card className="cursor-pointer hover:shadow-md transition-shadow">
+                    <Card className="cursor-pointer transition-shadow hover:shadow-md">
                         <Link href="/river/monitor">
                             <CardHeader>
                                 <CardTitle className="flex items-center">
                                     <Activity className="mr-2 h-5 w-5" />
                                     Monitoramento em Tempo Real
                                 </CardTitle>
-                                <CardDescription>
-                                    Acompanhe os dados das estações hidrológicas
-                                </CardDescription>
+                                <CardDescription>Acompanhe os dados das estações hidrológicas</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">
-                                    Visualize gráficos, métricas e alertas do sistema de monitoramento
-                                </p>
+                                <p className="text-muted-foreground text-sm">Visualize gráficos, métricas e alertas do sistema de monitoramento</p>
                             </CardContent>
                         </Link>
                     </Card>
 
-                    <Card className="cursor-pointer hover:shadow-md transition-shadow">
+                    <Card className="cursor-pointer transition-shadow hover:shadow-md">
                         <Link href="/river/data">
                             <CardHeader>
                                 <CardTitle className="flex items-center">
                                     <Gauge className="mr-2 h-5 w-5" />
                                     Histórico de Dados
                                 </CardTitle>
-                                <CardDescription>
-                                    Consulte o histórico completo de medições
-                                </CardDescription>
+                                <CardDescription>Consulte o histórico completo de medições</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">
-                                    Analise tendências e padrões ao longo do tempo
-                                </p>
+                                <p className="text-muted-foreground text-sm">Analise tendências e padrões ao longo do tempo</p>
                             </CardContent>
                         </Link>
                     </Card>
 
-                    <Card className="cursor-pointer hover:shadow-md transition-shadow">
+                    <Card className="cursor-pointer transition-shadow hover:shadow-md">
                         <Link href="/settings">
                             <CardHeader>
                                 <CardTitle className="flex items-center">
                                     <Clock className="mr-2 h-5 w-5" />
                                     Configurações
                                 </CardTitle>
-                                <CardDescription>
-                                    Gerencie suas preferências e configurações
-                                </CardDescription>
+                                <CardDescription>Gerencie suas preferências e configurações</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">
-                                    Personalize notificações e alertas do sistema
-                                </p>
+                                <p className="text-muted-foreground text-sm">Personalize notificações e alertas do sistema</p>
                             </CardContent>
                         </Link>
                     </Card>
@@ -217,9 +190,7 @@ export default function Dashboard() {
                 <Card>
                     <CardHeader>
                         <CardTitle>Visão Geral do Sistema</CardTitle>
-                        <CardDescription>
-                            Status atual das estações e principais indicadores
-                        </CardDescription>
+                        <CardDescription>Status atual das estações e principais indicadores</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <div className="relative min-h-[400px] overflow-hidden rounded-xl">
@@ -234,15 +205,21 @@ export default function Dashboard() {
                                         <div className="space-y-2">
                                             <div className="flex items-center justify-between">
                                                 <span>Rio das Velhas - BH</span>
-                                                <Badge variant="default" className="bg-green-500">Online</Badge>
+                                                <Badge variant="default" className="bg-green-500">
+                                                    Online
+                                                </Badge>
                                             </div>
                                             <div className="flex items-center justify-between">
                                                 <span>Rio São Francisco - Pirapora</span>
-                                                <Badge variant="default" className="bg-green-500">Online</Badge>
+                                                <Badge variant="default" className="bg-green-500">
+                                                    Online
+                                                </Badge>
                                             </div>
                                             <div className="flex items-center justify-between">
                                                 <span>Rio Doce - GV</span>
-                                                <Badge variant="default" className="bg-green-500">Online</Badge>
+                                                <Badge variant="default" className="bg-green-500">
+                                                    Online
+                                                </Badge>
                                             </div>
                                             <div className="flex items-center justify-between">
                                                 <span>Rio Paraíba do Sul - JF</span>
@@ -250,13 +227,15 @@ export default function Dashboard() {
                                             </div>
                                             <div className="flex items-center justify-between">
                                                 <span>Rio Grande - Divinópolis</span>
-                                                <Badge variant="default" className="bg-green-500">Online</Badge>
+                                                <Badge variant="default" className="bg-green-500">
+                                                    Online
+                                                </Badge>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="space-y-4">
                                         <h3 className="font-semibold">Últimas Atualizações</h3>
-                                        <div className="space-y-2 text-sm text-muted-foreground">
+                                        <div className="text-muted-foreground space-y-2 text-sm">
                                             <div className="flex items-center">
                                                 <Clock className="mr-2 h-4 w-4" />
                                                 <span>Última medição: há 2 horas</span>

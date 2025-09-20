@@ -2,7 +2,13 @@
     "name": "monitor-rio/piracicaba",
     "type": "project",
     "description": "Sistema de monitoramento hidrológico do Rio Piracicaba - Integração com API da ANA",
-    "keywords": ["laravel", "framework", "hidrologia", "ana", "piracicaba"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "hidrologia",
+        "ana",
+        "piracicaba"
+    ],
     "license": "MIT",
     "require": {
         "php": "^8.1",

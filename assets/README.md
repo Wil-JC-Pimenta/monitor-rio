@@ -19,7 +19,9 @@ assets/
 ## 🎬 Vídeos
 
 ### demo-aplicacao.mkv
+
 Vídeo de demonstração completo da aplicação mostrando:
+
 - Interface do dashboard
 - Funcionalidades de visualização
 - Navegação entre páginas

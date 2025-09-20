@@ -9,26 +9,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertTriangle, Droplets, Gauge, Activity } from 'lucide-react';
 import { Line } from 'react-chartjs-2';
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-} from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
-ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend
-);
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 interface RiverData {
     id: number;
@@ -90,14 +73,14 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
         try {
             const response = await fetch(`/river/chart-data?station_id=${selectedStation}&days=7`);
             const data = await response.json();
-            
+
             const chartData = {
-                labels: data.data.map((item: RiverData) => 
-                    new Date(item.data_medicao).toLocaleDateString('pt-BR', { 
-                        day: '2-digit', 
+                labels: data.data.map((item: RiverData) =>
+                    new Date(item.data_medicao).toLocaleDateString('pt-BR', {
+                        day: '2-digit',
                         month: '2-digit',
-                        hour: '2-digit'
-                    })
+                        hour: '2-digit',
+                    }),
                 ),
                 datasets: [
                     {
@@ -201,15 +184,13 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
     return (
         <AppLayout>
             <Head title="Monitoramento do Rio" />
-            
+
             <div className="flex h-full flex-1 flex-col gap-4 overflow-x-auto rounded-xl p-4">
                 {/* Header */}
                 <div className="flex items-center justify-between">
                     <div>
                         <h1 className="text-2xl font-bold">Monitoramento do Rio</h1>
-                        <p className="text-muted-foreground">
-                            Acompanhe em tempo real os dados das estações hidrológicas
-                        </p>
+                        <p className="text-muted-foreground">Acompanhe em tempo real os dados das estações hidrológicas</p>
                     </div>
                     <Button onClick={fetchChartData} disabled={loading}>
                         <Activity className="mr-2 h-4 w-4" />
@@ -222,56 +203,44 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Total de Estações</CardTitle>
-                            <Gauge className="h-4 w-4 text-muted-foreground" />
+                            <Gauge className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">{stats.total_stations}</div>
-                            <p className="text-xs text-muted-foreground">
-                                Ativas e em manutenção
-                            </p>
+                            <p className="text-muted-foreground text-xs">Ativas e em manutenção</p>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Total de Medições</CardTitle>
-                            <Activity className="h-4 w-4 text-muted-foreground" />
+                            <Activity className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
                             <div className="text-2xl font-bold">{stats.total_measurements}</div>
-                            <p className="text-xs text-muted-foreground">
-                                Registros no sistema
-                            </p>
+                            <p className="text-muted-foreground text-xs">Registros no sistema</p>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Nível Máximo</CardTitle>
-                            <Droplets className="h-4 w-4 text-muted-foreground" />
+                            <Droplets className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
-                            <div className="text-2xl font-bold">
-                                {stats.max_nivel ? `${stats.max_nivel}m` : 'N/A'}
-                            </div>
-                            <p className="text-xs text-muted-foreground">
-                                Altura máxima registrada
-                            </p>
+                            <div className="text-2xl font-bold">{stats.max_nivel ? `${stats.max_nivel}m` : 'N/A'}</div>
+                            <p className="text-muted-foreground text-xs">Altura máxima registrada</p>
                         </CardContent>
                     </Card>
 
                     <Card>
                         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                             <CardTitle className="text-sm font-medium">Vazão Máxima</CardTitle>
-                            <Gauge className="h-4 w-4 text-muted-foreground" />
+                            <Gauge className="text-muted-foreground h-4 w-4" />
                         </CardHeader>
                         <CardContent>
-                            <div className="text-2xl font-bold">
-                                {stats.max_vazao ? `${stats.max_vazao}m³/s` : 'N/A'}
-                            </div>
-                            <p className="text-xs text-muted-foreground">
-                                Fluxo máximo registrado
-                            </p>
+                            <div className="text-2xl font-bold">{stats.max_vazao ? `${stats.max_vazao}m³/s` : 'N/A'}</div>
+                            <p className="text-muted-foreground text-xs">Fluxo máximo registrado</p>
                         </CardContent>
                     </Card>
                 </div>
@@ -280,9 +249,7 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
                 <Card>
                     <CardHeader>
                         <CardTitle>Análise Temporal</CardTitle>
-                        <CardDescription>
-                            Selecione uma estação para visualizar os dados detalhados
-                        </CardDescription>
+                        <CardDescription>Selecione uma estação para visualizar os dados detalhados</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <div className="mb-4">
@@ -320,9 +287,7 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
                 <Card>
                     <CardHeader>
                         <CardTitle>Dados Recentes</CardTitle>
-                        <CardDescription>
-                            Últimas medições das últimas 24 horas
-                        </CardDescription>
+                        <CardDescription>Últimas medições das últimas 24 horas</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <div className="space-y-4">
@@ -335,7 +300,7 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
                                                 <div className={`h-3 w-3 rounded-full ${levelStatus.color}`} />
                                                 <div>
                                                     <p className="font-medium">Estação {data.station_id}</p>
-                                                    <p className="text-sm text-muted-foreground">
+                                                    <p className="text-muted-foreground text-sm">
                                                         {new Date(data.data_medicao).toLocaleString('pt-BR')}
                                                     </p>
                                                 </div>
@@ -343,21 +308,15 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
                                             <div className="flex items-center space-x-4">
                                                 <div className="text-right">
                                                     <p className="text-sm font-medium">Nível</p>
-                                                    <p className="text-sm text-muted-foreground">
-                                                        {data.nivel ? `${data.nivel}m` : 'N/A'}
-                                                    </p>
+                                                    <p className="text-muted-foreground text-sm">{data.nivel ? `${data.nivel}m` : 'N/A'}</p>
                                                 </div>
                                                 <div className="text-right">
                                                     <p className="text-sm font-medium">Vazão</p>
-                                                    <p className="text-sm text-muted-foreground">
-                                                        {data.vazao ? `${data.vazao}m³/s` : 'N/A'}
-                                                    </p>
+                                                    <p className="text-muted-foreground text-sm">{data.vazao ? `${data.vazao}m³/s` : 'N/A'}</p>
                                                 </div>
                                                 <div className="text-right">
                                                     <p className="text-sm font-medium">Chuva</p>
-                                                    <p className="text-sm text-muted-foreground">
-                                                        {data.chuva ? `${data.chuva}mm` : 'N/A'}
-                                                    </p>
+                                                    <p className="text-muted-foreground text-sm">{data.chuva ? `${data.chuva}mm` : 'N/A'}</p>
                                                 </div>
                                                 <Badge variant={levelStatus.status === 'critical' ? 'destructive' : 'secondary'}>
                                                     {levelStatus.text}
@@ -367,21 +326,18 @@ export default function Monitor({ recentData, stats }: MonitorProps) {
                                     );
                                 })
                             ) : (
-                                <div className="text-center py-8 text-muted-foreground">
-                                    Nenhum dado recente disponível
-                                </div>
+                                <div className="text-muted-foreground py-8 text-center">Nenhum dado recente disponível</div>
                             )}
                         </div>
                     </CardContent>
                 </Card>
 
                 {/* Alertas */}
-                {recentData.some(data => data.nivel && data.nivel > 3.0) && (
+                {recentData.some((data) => data.nivel && data.nivel > 3.0) && (
                     <Alert>
                         <AlertTriangle className="h-4 w-4" />
                         <AlertDescription>
-                            <strong>Alerta:</strong> Algumas estações estão registrando níveis elevados. 
-                            Monitore de perto as condições do rio.
+                            <strong>Alerta:</strong> Algumas estações estão registrando níveis elevados. Monitore de perto as condições do rio.
                         </AlertDescription>
                     </Alert>
                 )}

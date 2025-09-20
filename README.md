@@ -81,12 +81,14 @@ O Rio Piracicaba é fundamental para o desenvolvimento socioeconômico do Vale d
 ### 🛠️ **Stack Tecnológico**
 
 #### **Backend**
+
 - **Laravel 11** - Framework PHP moderno e robusto
 - **PHP 8.1+** - Linguagem de programação server-side
 - **SQLite** - Banco de dados leve e eficiente
 - **Composer** - Gerenciador de dependências PHP
 
 #### **Frontend**
+
 - **React 19** - Biblioteca JavaScript para interfaces
 - **Inertia.js** - Bridge entre Laravel e React
 - **TypeScript** - JavaScript com tipagem estática
@@ -94,6 +96,7 @@ O Rio Piracicaba é fundamental para o desenvolvimento socioeconômico do Vale d
 - **Chart.js** - Biblioteca para gráficos interativos
 
 #### **DevOps e Deploy**
+
 - **Docker** - Containerização da aplicação
 - **Nginx** - Servidor web e proxy reverso
 - **GitHub Actions** - CI/CD automatizado
@@ -189,7 +192,7 @@ erDiagram
         timestamp created_at
         timestamp updated_at
     }
-    
+
     RIVER_DATA {
         bigint id PK
         bigint station_id FK
@@ -200,7 +203,7 @@ erDiagram
         timestamp created_at
         timestamp updated_at
     }
-    
+
     USERS {
         bigint id PK
         string name
@@ -211,7 +214,7 @@ erDiagram
         timestamp created_at
         timestamp updated_at
     }
-    
+
     STATIONS ||--o{ RIVER_DATA : "has many"
     USERS ||--o{ STATIONS : "manages"
 ```
@@ -219,6 +222,7 @@ erDiagram
 ### 📋 **Descrição das Entidades**
 
 #### **🏭 STATIONS (Estações Hidrológicas)**
+
 - **`id`**: Identificador único da estação
 - **`name`**: Nome da estação (ex: "Rio Piracicaba - Estação Centro")
 - **`code`**: Código único da estação na ANA
@@ -228,6 +232,7 @@ erDiagram
 - **`last_measurement`**: Timestamp da última medição
 
 #### **📊 RIVER_DATA (Dados Hidrológicos)**
+
 - **`id`**: Identificador único do registro
 - **`station_id`**: Referência à estação (FK)
 - **`nivel`**: Nível do rio em metros
@@ -248,6 +253,7 @@ erDiagram
 ### 📡 **Endpoints Principais**
 
 #### **🏠 Dashboard e Navegação**
+
 ```http
 GET  /                    # Dashboard principal
 GET  /stations           # Lista de estações
@@ -256,6 +262,7 @@ GET  /analytics          # Análises e estatísticas
 ```
 
 #### **📊 API de Dados Hidrológicos**
+
 ```http
 GET  /api/river-data                    # Lista dados hidrológicos
 GET  /api/river-data/chart              # Dados para gráficos
@@ -267,18 +274,21 @@ DELETE /api/river-data/{id}             # Excluir dados
 ```
 
 #### **🏭 API de Estações**
+
 ```http
 GET  /api/stations                      # Lista todas as estações
 GET  /api/stations/discover-piracicaba  # Descobrir estações do Piracicaba
 ```
 
 #### **🌐 Integração com ANA**
+
 ```http
 POST /api/ana/fetch                     # Buscar dados da ANA
 POST /api/ana/refresh-station           # Atualizar estação específica
 ```
 
 #### **💚 Health Check**
+
 ```http
 GET  /health                           # Status da aplicação
 GET  /health/detailed                  # Status detalhado
@@ -287,42 +297,44 @@ GET  /health/detailed                  # Status detalhado
 ### 📝 **Exemplos de Resposta**
 
 #### **GET /api/river-data**
+
 ```json
 {
-  "data": [
-    {
-      "id": 1,
-      "station_id": 1,
-      "nivel": 2.45,
-      "vazao": 15.2,
-      "chuva": 0.5,
-      "data_medicao": "2024-09-20T12:00:00Z",
-      "station": {
-        "id": 1,
-        "name": "Rio Piracicaba - Estação Centro",
-        "code": "PIR001",
-        "location": "Ipatinga, MG"
-      }
+    "data": [
+        {
+            "id": 1,
+            "station_id": 1,
+            "nivel": 2.45,
+            "vazao": 15.2,
+            "chuva": 0.5,
+            "data_medicao": "2024-09-20T12:00:00Z",
+            "station": {
+                "id": 1,
+                "name": "Rio Piracicaba - Estação Centro",
+                "code": "PIR001",
+                "location": "Ipatinga, MG"
+            }
+        }
+    ],
+    "meta": {
+        "total": 150,
+        "per_page": 25,
+        "current_page": 1
     }
-  ],
-  "meta": {
-    "total": 150,
-    "per_page": 25,
-    "current_page": 1
-  }
 }
 ```
 
 #### **GET /health**
+
 ```json
 {
-  "status": "healthy",
-  "timestamp": "2024-09-20T12:00:00Z",
-  "database": "connected",
-  "cache": "working",
-  "storage": "writable",
-  "version": "1.3.0",
-  "environment": "production"
+    "status": "healthy",
+    "timestamp": "2024-09-20T12:00:00Z",
+    "database": "connected",
+    "cache": "working",
+    "storage": "writable",
+    "version": "1.3.0",
+    "environment": "production"
 }
 ```
 
@@ -339,6 +351,7 @@ A **ANA** é a agência reguladora federal responsável pela implementação da 
 O sistema integra com a **API oficial da ANA** através do HidroWebService:
 
 #### **🔐 Autenticação**
+
 ```php
 // Configuração de autenticação
 'base_url' => 'https://www.ana.gov.br/hidrowebservice',
@@ -350,6 +363,7 @@ O sistema integra com a **API oficial da ANA** através do HidroWebService:
 ```
 
 #### **📡 Endpoints Utilizados**
+
 - **`/EstacoesTelemetricas/OAUth/v1`** - Autenticação
 - **`/EstacoesTelemetricas/HidroInventarioEstacoes/v1`** - Inventário de estações
 - **`/EstacoesTelemetricas/HidroSerieCotas/v1`** - Dados de cotas/níveis
@@ -357,6 +371,7 @@ O sistema integra com a **API oficial da ANA** através do HidroWebService:
 - **`/EstacoesTelemetricas/HidroSerieChuva/v1`** - Dados de chuva
 
 #### **🎯 Estações do Rio Piracicaba Monitoradas**
+
 - **Estação Vale do Aço** - Principal estação industrial
 - **Estação Centro** - Área urbana de Ipatinga
 - **Estação Zona Rural** - Monitoramento agrícola
@@ -426,6 +441,7 @@ open http://localhost:8000
 ### 🔧 **Configuração Detalhada**
 
 #### **Variáveis de Ambiente (.env)**
+
 ```env
 # Aplicação
 APP_NAME="Monitor Rio Piracicaba"
@@ -499,24 +515,28 @@ sudo ./scripts/setup-complete.sh
 ## ⚙️ Funcionalidades
 
 ### 🏠 **Dashboard Principal**
+
 - **📊 Métricas em Tempo Real**: Níveis, vazões e precipitação
 - **📈 Gráficos Interativos**: Visualizações temporais
 - **🚨 Alertas**: Notificações de níveis críticos
 - **📱 Design Responsivo**: Funciona em todos os dispositivos
 
 ### 🏭 **Gestão de Estações**
+
 - **📍 Localização GPS**: Coordenadas precisas
 - **📊 Status Operacional**: Monitoramento de saúde
 - **📈 Histórico**: Dados históricos completos
 - **🔍 Busca Avançada**: Filtros e ordenação
 
 ### 📊 **Análises e Estatísticas**
+
 - **📈 Tendências**: Análise de padrões temporais
 - **📊 Comparativos**: Análise entre estações
 - **📋 Relatórios**: Exportação de dados
 - **🎯 Alertas Personalizados**: Configuração de limites
 
 ### 🔄 **Sincronização Automática**
+
 - **⏰ Agendamento**: Atualizações programadas
 - **🔄 Real-time**: Dados em tempo real
 - **📱 Notificações**: Alertas push
@@ -529,11 +549,13 @@ sudo ./scripts/setup-complete.sh
 ### 💚 **Health Checks**
 
 #### **Endpoint Básico**
+
 ```http
 GET /health
 ```
 
 #### **Endpoint Detalhado**
+
 ```http
 GET /health/detailed
 ```
@@ -593,8 +615,8 @@ npm test
 
 ---
 
-
 ### 🛠️ **Ferramentas e Bibliotecas**
+
 - **Laravel Framework** - Base sólida para o desenvolvimento
 - **React & Inertia.js** - Interface moderna e responsiva
 - **Tailwind CSS** - Design system eficiente
@@ -606,7 +628,9 @@ npm test
 ## 📞 Contato
 
 ### 👨‍💻 **Desenvolvedor**
+
 **Wilker Junio Coelho Pimenta**
+
 - 📧 **Email**: wiljcpimenta@gmail.com
 - 💼 **LinkedIn**: [Wilker Pimenta](https://linkedin.com/in/wilker-j-c-pimenta)
 - 🐙 **GitHub**: [@Wil-JC-Pimenta](https://github.com/Wil-JC-Pimenta)
@@ -644,7 +668,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-
 ## 🏆 Status do Projeto
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Wil-JC-Pimenta/monitor-rio)
@@ -653,6 +676,7 @@ SOFTWARE.
 ![GitHub stars](https://img.shields.io/github/stars/Wil-JC-Pimenta/monitor-rio)
 
 ### 📊 **Métricas do Projeto**
+
 - **📅 Última Atualização**: Setembro 2025
 - **🔢 Versão Atual**: 1.3.0
 - **📈 Status**: Ativo e em desenvolvimento
@@ -664,7 +688,7 @@ SOFTWARE.
 
 **🌊 Desenvolvido com ❤️ para o Vale do Aço, Minas Gerais**
 
-*Sistema de monitoramento hidrológico em tempo real do Rio Piracicaba*
+_Sistema de monitoramento hidrológico em tempo real do Rio Piracicaba_
 
 [![Made with Laravel](https://img.shields.io/badge/Made%20with-Laravel-red.svg)](https://laravel.com)
 [![Made with React](https://img.shields.io/badge/Made%20with-React-blue.svg)](https://reactjs.org)

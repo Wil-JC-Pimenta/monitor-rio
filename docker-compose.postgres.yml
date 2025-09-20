@@ -6,7 +6,7 @@ services:
     container_name: monitor-rio-app
     restart: unless-stopped
     ports:
-      - "8000:80"
+      - '8000:80'
     environment:
       - APP_ENV=production
       - APP_DEBUG=false
@@ -41,7 +41,7 @@ services:
       - postgres_data:/var/lib/postgresql/data
       - ./database/init:/docker-entrypoint-initdb.d
     ports:
-      - "5432:5432"
+      - '5432:5432'
     networks:
       - monitor-rio-network
 

@@ -1,9 +1,9 @@
-import Settings from './Settings'
-import Auth from './Auth'
+import Settings from './Settings';
+import Auth from './Auth';
 
 const Controllers = {
     Settings,
     Auth,
-}
+};
 
-export default Controllers
+export default Controllers;
