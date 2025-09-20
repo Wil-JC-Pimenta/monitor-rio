@@ -607,7 +607,7 @@ npm test
 
 ### 👨‍💻 **Desenvolvedor**
 **Wilker Junio Coelho Pimenta**
-- 📧 **Email**: wiljcpimenta@email.com
+- 📧 **Email**: wiljcpimenta@gmail.com
 - 💼 **LinkedIn**: [Wilker Pimenta](https://linkedin.com/in/wilker-j-c-pimenta)
 - 🐙 **GitHub**: [@Wil-JC-Pimenta](https://github.com/Wil-JC-Pimenta)
 - 🌐 **Portfolio**: [wilkerpimenta.dev](https://wilker-pimenta.vercel.app/)
