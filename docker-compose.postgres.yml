@@ -1,0 +1,53 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.postgres
+    container_name: monitor-rio-app
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_URL=http://localhost:8000
+      - DB_CONNECTION=pgsql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=monitor_rio
+      - DB_USERNAME=monitor_user
+      - DB_PASSWORD=monitor_pass
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_CONNECTION=sync
+    depends_on:
+      - postgres
+    volumes:
+      - ./storage:/var/www/html/storage
+      - ./public:/var/www/html/public
+    networks:
+      - monitor-rio-network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: monitor-rio-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=monitor_rio
+      - POSTGRES_USER=monitor_user
+      - POSTGRES_PASSWORD=monitor_pass
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    networks:
+      - monitor-rio-network
+
+networks:
+  monitor-rio-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

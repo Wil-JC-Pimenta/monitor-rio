@@ -1,0 +1,61 @@
+# Arquivos a serem ignorados no deploy do Fly.io
+
+# Desenvolvimento
+.env
+.env.local
+.env.development
+.env.testing
+.env.staging
+
+# Logs
+storage/logs/*
+!storage/logs/.gitkeep
+
+# Cache
+bootstrap/cache/*
+!bootstrap/cache/.gitkeep
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Docker (manter apenas Dockerfile principal)
+Dockerfile.dev
+Dockerfile.postgres
+Dockerfile.simple
+Dockerfile.fly
+docker-compose*.yml
+docker/
+.dockerignore
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testes
+tests/
+phpunit.xml
+.phpunit.result.cache
+
+# Documentação
+README.md
+docs/
+
+# Scripts locais
+start.sh
+deploy-fly.sh
+
+# Arquivos temporários
+*.tmp
+*.temp

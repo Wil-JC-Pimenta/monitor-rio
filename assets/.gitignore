@@ -1,0 +1,13 @@
+# Ignorar arquivos temporários
+*.tmp
+*.temp
+
+# Manter apenas arquivos essenciais
+!videos/
+!screenshots/
+!*.md
+
+# Ignorar arquivos de vídeo grandes (opcional)
+# *.mkv
+# *.mp4
+# *.avi

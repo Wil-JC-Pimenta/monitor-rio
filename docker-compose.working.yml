@@ -1,0 +1,42 @@
+services:
+  app:
+    image: webdevops/php-nginx:8.1-alpine
+    container_name: monitor-rio-app
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_URL=http://localhost:8000
+      - DB_CONNECTION=sqlite
+      - DB_DATABASE=/var/www/html/database/database.sqlite
+      - CACHE_DRIVER=file
+      - SESSION_DRIVER=file
+      - QUEUE_CONNECTION=sync
+      - PHP_DISPLAY_ERRORS=0
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_UPLOAD_MAX_FILESIZE=10M
+      - PHP_POST_MAX_SIZE=10M
+    volumes:
+      - .:/var/www/html
+      - ./database:/var/www/html/database
+      - ./storage:/var/www/html/storage
+      - ./public:/var/www/html/public
+    networks:
+      - monitor-rio-network
+    command: >
+      sh -c "
+        composer install --no-dev --optimize-autoloader &&
+        npm install && npm run build &&
+        touch database/database.sqlite &&
+        php artisan migrate --force &&
+        php artisan config:cache &&
+        php artisan route:cache &&
+        php artisan view:cache &&
+        /opt/docker/bin/provision/entrypoint.sh supervisord
+      "
+
+networks:
+  monitor-rio-network:
+    driver: bridge
