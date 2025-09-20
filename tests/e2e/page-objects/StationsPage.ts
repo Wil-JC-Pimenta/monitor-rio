@@ -132,7 +132,7 @@ export class StationsPage {
   /**
    * Verifica se a estação está no mapa (se houver)
    */
-  async verifyStationOnMap(stationName: string) {
+  async verifyStationOnMap(_stationName: string) {
     const mapContainer = this.page.locator('[data-testid="map-container"], .map-container');
     if (await mapContainer.isVisible()) {
       // Aqui você pode implementar verificações específicas do mapa

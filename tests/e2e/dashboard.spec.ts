@@ -1,6 +1,5 @@
 import { test, expect } from '@playwright/test';
 import { DashboardPage } from './page-objects/DashboardPage';
-import { expectedPageTitles } from './fixtures/test-data';
 
 /**
  * Testes E2E para a página de Dashboard
@@ -101,7 +100,7 @@ test.describe('Dashboard Page', () => {
     await dashboardPage.verifyDataIsRecent(10);
   });
 
-  test('deve ter performance adequada', async ({ page }) => {
+  test('deve ter performance adequada', async () => {
     // Mede o tempo de carregamento da página
     const startTime = Date.now();
     await dashboardPage.goto();
@@ -112,7 +111,7 @@ test.describe('Dashboard Page', () => {
     expect(loadTime).toBeLessThan(5000);
   });
 
-  test('deve funcionar com diferentes navegadores', async ({ page }) => {
+  test('deve funcionar com diferentes navegadores', async () => {
     // Este teste será executado em diferentes navegadores automaticamente
     // devido à configuração do Playwright
     

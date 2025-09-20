@@ -95,7 +95,7 @@ export default function Dashboard() {
             acc[stationCode].data.push(data);
             return acc;
         },
-        {} as Record<string, { station: any; data: RiverData[] }>,
+        {} as Record<string, { station: Station; data: RiverData[] }>,
     );
 
     const formatTime = (dateString: string) => {

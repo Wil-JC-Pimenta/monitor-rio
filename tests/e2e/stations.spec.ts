@@ -105,7 +105,7 @@ test.describe('Stations Page', () => {
     await stationsPage.verifyStationsDisplayed();
   });
 
-  test('deve ter performance adequada', async ({ page }) => {
+  test('deve ter performance adequada', async () => {
     // Mede o tempo de carregamento da página
     const startTime = Date.now();
     await stationsPage.goto();
@@ -210,13 +210,13 @@ test.describe('Stations - Acessibilidade', () => {
     await expect(focusedElement).toBeVisible();
   });
 
-  test('deve ter contraste adequado', async ({ page }) => {
+  test('deve ter contraste adequado', async () => {
     // Verifica se os elementos têm contraste adequado
     // (isso pode ser verificado com ferramentas de acessibilidade)
     await stationsPage.verifyStationData();
   });
 
-  test('deve ter labels apropriados', async ({ page }) => {
+  test('deve ter labels apropriados', async () => {
     // Verifica se os campos de busca têm labels
     await expect(stationsPage.searchInput).toHaveAttribute('placeholder');
     

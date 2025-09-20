@@ -161,9 +161,8 @@ export class DashboardPage {
   /**
    * Verifica se os dados estão atualizados (última atualização recente)
    */
-  async verifyDataIsRecent(maxMinutesOld = 10) {
+  async verifyDataIsRecent(_maxMinutesOld = 10) {
     const lastUpdateText = await this.lastUpdate.textContent();
-    const now = new Date();
     
     // Aqui você pode implementar lógica para verificar se os dados são recentes
     // Por exemplo, extrair timestamp do texto e comparar com agora
