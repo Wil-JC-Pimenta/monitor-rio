@@ -27,7 +27,9 @@
 - [API Endpoints](#-api-endpoints)
 - [Integração com ANA](#-integração-com-ana)
 - [Instalação](#-instalação)
+- [Teste Local](#-teste-local)
 - [Deploy](#-deploy)
+- [Testes E2E](#-testes-e2e)
 - [Funcionalidades](#-funcionalidades)
 - [Monitoramento](#-monitoramento)
 - [Contribuição](#-contribuição)
@@ -48,6 +50,8 @@ O **Monitor Rio Piracicaba** é uma aplicação web moderna e robusta desenvolvi
 - **🌐 API Integrada**: Conexão direta com dados oficiais da ANA
 - **📱 Interface Responsiva**: Design moderno e mobile-first
 - **🚀 Performance**: Cache inteligente e otimizações
+- **🧪 QA Automatizado**: 230+ testes E2E com Playwright
+- **🔧 DevOps**: CI/CD completo com GitHub Actions
 - **🔒 Confiabilidade**: Sistema de fallback com dados mock
 
 ---
@@ -438,6 +442,56 @@ docker-compose up -d
 open http://localhost:8000
 ```
 
+---
+
+## 🚀 Teste Local
+
+### ⚡ Teste Rápido (Recomendado)
+
+```bash
+# Executar script automatizado de teste
+./teste-local.sh
+```
+
+O script irá automaticamente:
+- ✅ Verificar pré-requisitos (PHP, Composer, Node.js)
+- ✅ Testar dependências e Laravel
+- ✅ Iniciar servidor em http://localhost:8000
+- ✅ Testar endpoints principais
+- ✅ Verificar dados de teste
+
+### 🔧 Teste Manual
+
+```bash
+# 1. Instalar dependências
+composer install
+npm install
+
+# 2. Configurar ambiente
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan db:seed
+
+# 3. Iniciar servidor
+php artisan serve --host=0.0.0.0 --port=8000
+
+# 4. Acessar no navegador
+open http://localhost:8000
+```
+
+### 📊 URLs de Teste
+
+- **Dashboard:** http://localhost:8000/
+- **Estações:** http://localhost:8000/stations
+- **Dados:** http://localhost:8000/data
+- **Análises:** http://localhost:8000/analytics
+- **Health Check:** http://localhost:8000/health
+
+### 📚 Documentação Completa
+
+Para instruções detalhadas, consulte o [**Guia de Teste Local**](GUIA-TESTE-LOCAL.md).
+
 ### 🔧 **Configuração Detalhada**
 
 #### **Variáveis de Ambiente (.env)**
@@ -509,6 +563,74 @@ sudo ./scripts/setup-complete.sh
 - **`scripts/configure-ssl.sh`** - Configura HTTPS com Certbot
 - **`scripts/configure-services.sh`** - Configura systemd services
 - **`scripts/deploy.sh`** - Deploy contínuo automatizado
+
+---
+
+## 🧪 Testes E2E
+
+### 🎯 **Sistema de QA Automatizado**
+
+O projeto possui um sistema completo de testes End-to-End (E2E) com **230+ testes automatizados** usando Playwright.
+
+### 🚀 **Executar Testes**
+
+```bash
+# Executar todos os testes E2E
+npm run test:e2e
+
+# Interface visual (recomendado)
+npm run test:e2e:ui
+
+# Com navegador visível
+npm run test:e2e:headed
+
+# Modo debug
+npm run test:e2e:debug
+
+# Ver relatórios
+npm run test:e2e:report
+```
+
+### 📊 **Cobertura de Testes**
+
+#### **Dashboard (16 testes)**
+- ✅ Carregamento de páginas
+- ✅ Exibição de métricas hidrológicas
+- ✅ Gráficos e visualizações
+- ✅ Navegação entre seções
+- ✅ Responsividade mobile
+
+#### **Estações (21 testes)**
+- ✅ Listagem e busca
+- ✅ Filtros por status
+- ✅ Detalhes das estações
+- ✅ Exportação de dados
+- ✅ Acessibilidade
+
+#### **APIs (18 testes)**
+- ✅ Health check
+- ✅ Performance e estresse
+- ✅ Segurança e validação
+- ✅ CORS e rate limiting
+
+### 🌐 **Navegadores Testados**
+
+- **Chrome** - Desktop e Mobile
+- **Firefox** - Desktop
+- **Safari** - Desktop e Mobile
+- **Responsivo** - Múltiplos viewports
+
+### 📈 **Recursos de QA**
+
+- **Relatórios HTML** - Visualização detalhada
+- **Screenshots** - Capturas em falhas
+- **Videos** - Gravações de execução
+- **Traces** - Rastreamento detalhado
+- **CI/CD Integration** - Execução automática
+
+### 📚 **Documentação**
+
+Para mais detalhes, consulte a [**Documentação dos Testes E2E**](tests/e2e/README.md).
 
 ---
 
@@ -678,8 +800,11 @@ SOFTWARE.
 ### 📊 **Métricas do Projeto**
 
 - **📅 Última Atualização**: Setembro 2025
-- **🔢 Versão Atual**: 1.3.0
+- **🔢 Versão Atual**: 1.4.0
 - **📈 Status**: Ativo e em desenvolvimento
+- **🧪 Testes E2E**: 230+ testes automatizados
+- **🔧 CI/CD**: GitHub Actions configurado
+- **📚 Documentação**: Guias completos de teste e deploy
 - **🎯 Próximos Passos**: Deploy em produção e monitoramento avançado
 
 ---
