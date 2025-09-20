@@ -1,0 +1,4828 @@
+{
+  "config": {
+    "configFile": "/home/wilker/Área de Trabalho/monitor-rio/playwright.config.ts",
+    "rootDir": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e/global-setup.ts",
+    "globalTeardown": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e/global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/results.xml"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/wilker/Área de Trabalho/monitor-rio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/wilker/Área de Trabalho/monitor-rio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/wilker/Área de Trabalho/monitor-rio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/wilker/Área de Trabalho/monitor-rio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/wilker/Área de Trabalho/monitor-rio/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/home/wilker/Área de Trabalho/monitor-rio/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": {
+      "command": "php artisan serve --host=127.0.0.1 --port=8000",
+      "url": "http://127.0.0.1:8000",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "api.spec.ts",
+      "file": "api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Endpoints",
+          "file": "api.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Health Check deve retornar status 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-2763d89bf67079ade0c5",
+              "file": "api.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "API de estações deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-801011eeb7546b518577",
+              "file": "api.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "API de dados hidrológicos deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-91ce071ba46d651aea06",
+              "file": "api.spec.ts",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "API de análises deve retornar estatísticas válidas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-d28c22716c7ccac73c7a",
+              "file": "api.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar CORS headers corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-def3b6f024259486a8e9",
+              "file": "api.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "API deve ter rate limiting adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-bd9bdf9f87b130cd4a44",
+              "file": "api.spec.ts",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar erro 404 para endpoints inexistentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-03f275c381c6b0df100a",
+              "file": "api.spec.ts",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar dados em formato JSON",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-bf5c402e9f2989ceeaa9",
+              "file": "api.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-2842ca4beebe5ccb8da4",
+              "file": "api.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com diferentes métodos HTTP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-e11b0def56355f867d68",
+              "file": "api.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "API deve validar parâmetros de entrada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-2fc917146f15ca1f5e9d",
+              "file": "api.spec.ts",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "Health Check deve retornar status 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-5c4698ef1acdd0f3ca45",
+              "file": "api.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "API de estações deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-4916a637fd5c13770b92",
+              "file": "api.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "API de dados hidrológicos deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-88d7059fe0e7daba4f08",
+              "file": "api.spec.ts",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "API de análises deve retornar estatísticas válidas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-968155d2cc8850dd4ce5",
+              "file": "api.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar CORS headers corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-4cb3bf16cf71b004a019",
+              "file": "api.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "API deve ter rate limiting adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-76238f275c769acbc56a",
+              "file": "api.spec.ts",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar erro 404 para endpoints inexistentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-32ef6724341e628aec67",
+              "file": "api.spec.ts",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar dados em formato JSON",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-683b256f516d9d672c03",
+              "file": "api.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-4b63b6f847e516d7882c",
+              "file": "api.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com diferentes métodos HTTP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-ff25fcfdcaddeca80ff8",
+              "file": "api.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "API deve validar parâmetros de entrada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-61f08050f3049eee9269",
+              "file": "api.spec.ts",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "Health Check deve retornar status 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-a3500b3af7e39af235c8",
+              "file": "api.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "API de estações deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-c03933d96178f5eff80e",
+              "file": "api.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "API de dados hidrológicos deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-9b9aef21eab004c9473a",
+              "file": "api.spec.ts",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "API de análises deve retornar estatísticas válidas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-853e5e3b15278177a72c",
+              "file": "api.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar CORS headers corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-a118ae8e70e586a38472",
+              "file": "api.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "API deve ter rate limiting adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-3f2c299ca5e9f502e125",
+              "file": "api.spec.ts",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar erro 404 para endpoints inexistentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-378b79c51b7bffb74b56",
+              "file": "api.spec.ts",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar dados em formato JSON",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-2acfd29afb652d9eed3f",
+              "file": "api.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-fcb4f7d9411f0fa07edf",
+              "file": "api.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com diferentes métodos HTTP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-dd81c3fec1bb1e5ac424",
+              "file": "api.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "API deve validar parâmetros de entrada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-e878142db90bc738c3c7",
+              "file": "api.spec.ts",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "Health Check deve retornar status 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-20da3d515a5414d4fb0d",
+              "file": "api.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "API de estações deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-f85a8b43fed5851e8c56",
+              "file": "api.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "API de dados hidrológicos deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-80e2cee50067f6a28417",
+              "file": "api.spec.ts",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "API de análises deve retornar estatísticas válidas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-848f3849a304b72ffbf5",
+              "file": "api.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar CORS headers corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-eece253693d8638f587f",
+              "file": "api.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "API deve ter rate limiting adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-3e8f07ca35e36de427de",
+              "file": "api.spec.ts",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar erro 404 para endpoints inexistentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-fc89e304f1e401b94028",
+              "file": "api.spec.ts",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar dados em formato JSON",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-4adfffd3c26355989dbb",
+              "file": "api.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-fa69d2c2f15480a4e13b",
+              "file": "api.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com diferentes métodos HTTP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-28e668cee5a5f2dc2a74",
+              "file": "api.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "API deve validar parâmetros de entrada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-e0277acb905757fff09b",
+              "file": "api.spec.ts",
+              "line": 130,
+              "column": 3
+            },
+            {
+              "title": "Health Check deve retornar status 200",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-c8cad63c9b93000ecd79",
+              "file": "api.spec.ts",
+              "line": 9,
+              "column": 3
+            },
+            {
+              "title": "API de estações deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-06c7495f2f9868b66272",
+              "file": "api.spec.ts",
+              "line": 19,
+              "column": 3
+            },
+            {
+              "title": "API de dados hidrológicos deve retornar dados válidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-31569c90c823e4a3fa29",
+              "file": "api.spec.ts",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "API de análises deve retornar estatísticas válidas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-bd071b0f9e9d2cbb97db",
+              "file": "api.spec.ts",
+              "line": 51,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar CORS headers corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-3d70c1c0c5beb08b5e46",
+              "file": "api.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "API deve ter rate limiting adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-2e8e043ba691a65d053c",
+              "file": "api.spec.ts",
+              "line": 77,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar erro 404 para endpoints inexistentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-de4277d010c56d3d4a75",
+              "file": "api.spec.ts",
+              "line": 94,
+              "column": 3
+            },
+            {
+              "title": "API deve retornar dados em formato JSON",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-d2dee05f9551b85f7e67",
+              "file": "api.spec.ts",
+              "line": 100,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-6d218841e1a34e7678bd",
+              "file": "api.spec.ts",
+              "line": 109,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com diferentes métodos HTTP",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-eb42b611b0d34f64a23d",
+              "file": "api.spec.ts",
+              "line": 120,
+              "column": 3
+            },
+            {
+              "title": "API deve validar parâmetros de entrada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-9fb291f97671c5b3928c",
+              "file": "api.spec.ts",
+              "line": 130,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "API - Performance e Estresse",
+          "file": "api.spec.ts",
+          "line": 139,
+          "column": 6,
+          "specs": [
+            {
+              "title": "API deve suportar múltiplas requisições concorrentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-f739689db71b45d10f62",
+              "file": "api.spec.ts",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta consistente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-a8fd51a18a676f8dc7df",
+              "file": "api.spec.ts",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com payloads grandes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-92f2990429e9e2d5277d",
+              "file": "api.spec.ts",
+              "line": 176,
+              "column": 3
+            },
+            {
+              "title": "API deve suportar múltiplas requisições concorrentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-1f69677d0e4a97123f52",
+              "file": "api.spec.ts",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta consistente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-a88387b1bcd6d2bf885e",
+              "file": "api.spec.ts",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com payloads grandes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-6f7920625287cddff71e",
+              "file": "api.spec.ts",
+              "line": 176,
+              "column": 3
+            },
+            {
+              "title": "API deve suportar múltiplas requisições concorrentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-addb9ae46b60b501dfd9",
+              "file": "api.spec.ts",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta consistente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-930dfe3928d4442089cd",
+              "file": "api.spec.ts",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com payloads grandes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-6abb6140c3800191998c",
+              "file": "api.spec.ts",
+              "line": 176,
+              "column": 3
+            },
+            {
+              "title": "API deve suportar múltiplas requisições concorrentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-ed8db58b3c7743dfc809",
+              "file": "api.spec.ts",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta consistente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-6a39303de2188e89eb9a",
+              "file": "api.spec.ts",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com payloads grandes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-66472f4871957414108c",
+              "file": "api.spec.ts",
+              "line": 176,
+              "column": 3
+            },
+            {
+              "title": "API deve suportar múltiplas requisições concorrentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-36ddd3957917bb9a59be",
+              "file": "api.spec.ts",
+              "line": 141,
+              "column": 3
+            },
+            {
+              "title": "API deve ter tempo de resposta consistente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-42b5a3624f128f54f3e9",
+              "file": "api.spec.ts",
+              "line": 153,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar com payloads grandes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-07e1e5acb080d166c957",
+              "file": "api.spec.ts",
+              "line": 176,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "API - Segurança",
+          "file": "api.spec.ts",
+          "line": 187,
+          "column": 6,
+          "specs": [
+            {
+              "title": "API deve rejeitar requisições maliciosas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-595c8411f9b1460edca5",
+              "file": "api.spec.ts",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "API deve validar headers de segurança",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-8ab16f82ad1f6a182feb",
+              "file": "api.spec.ts",
+              "line": 197,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar apenas com métodos permitidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-36d310d54180efbcbf58",
+              "file": "api.spec.ts",
+              "line": 209,
+              "column": 3
+            },
+            {
+              "title": "API deve rejeitar requisições maliciosas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-7c985596f9be30302950",
+              "file": "api.spec.ts",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "API deve validar headers de segurança",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-1a9f7157596e0f1d5cca",
+              "file": "api.spec.ts",
+              "line": 197,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar apenas com métodos permitidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-a49eed9841b70b999f66",
+              "file": "api.spec.ts",
+              "line": 209,
+              "column": 3
+            },
+            {
+              "title": "API deve rejeitar requisições maliciosas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-b7e62097c00e8cc743e6",
+              "file": "api.spec.ts",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "API deve validar headers de segurança",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-85dd84ea563ab0552f91",
+              "file": "api.spec.ts",
+              "line": 197,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar apenas com métodos permitidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-d362643600edb3e522bd",
+              "file": "api.spec.ts",
+              "line": 209,
+              "column": 3
+            },
+            {
+              "title": "API deve rejeitar requisições maliciosas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-44231c2ff95fc7d39cf5",
+              "file": "api.spec.ts",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "API deve validar headers de segurança",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-b1a52ef3110fa988d658",
+              "file": "api.spec.ts",
+              "line": 197,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar apenas com métodos permitidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-6dcc39144f716f3c23be",
+              "file": "api.spec.ts",
+              "line": 209,
+              "column": 3
+            },
+            {
+              "title": "API deve rejeitar requisições maliciosas",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-b996ee07a3642ac4cb07",
+              "file": "api.spec.ts",
+              "line": 189,
+              "column": 3
+            },
+            {
+              "title": "API deve validar headers de segurança",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-0e84386b83b2922c4d4a",
+              "file": "api.spec.ts",
+              "line": 197,
+              "column": 3
+            },
+            {
+              "title": "API deve funcionar apenas com métodos permitidos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "1ea1b1599cbc08f16936-db124bde165ed1d4ba1c",
+              "file": "api.spec.ts",
+              "line": 209,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard.spec.ts",
+      "file": "dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard Page",
+          "file": "dashboard.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve carregar a página de dashboard corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-04d654c01740fe9c6a44",
+              "file": "dashboard.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir as métricas principais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-2b75d52134deda23394e",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve carregar os gráficos corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5d9ee77b04906a92b49d",
+              "file": "dashboard.spec.ts",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "deve exibir o status do sistema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-45811df43a01958ab1c2",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "deve navegar para outras seções corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-f56ed73258fe1cfb9080",
+              "file": "dashboard.spec.ts",
+              "line": 59,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5ef9a88ae374b7e7e0dc",
+              "file": "dashboard.spec.ts",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar dados quando solicitado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-ffb293ebce4f438bdea3",
+              "file": "dashboard.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "deve exibir dados recentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-3cf5d50a9807512cc90a",
+              "file": "dashboard.spec.ts",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-66421da363455a445c47",
+              "file": "dashboard.spec.ts",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com diferentes navegadores",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4b02a2e41130d80dd0eb",
+              "file": "dashboard.spec.ts",
+              "line": 115,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de dashboard corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-738af26aebc6a70d21b2",
+              "file": "dashboard.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir as métricas principais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-650b998df09ea245d697",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve carregar os gráficos corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-09ae483c853732588e89",
+              "file": "dashboard.spec.ts",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "deve exibir o status do sistema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4369924b5bfbb52b57e0",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "deve navegar para outras seções corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-797931ae83917881a1d1",
+              "file": "dashboard.spec.ts",
+              "line": 59,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-355215936216af1104f2",
+              "file": "dashboard.spec.ts",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar dados quando solicitado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-18efe143d188d9d06cd7",
+              "file": "dashboard.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "deve exibir dados recentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e83bc8b910e470c8d3f3",
+              "file": "dashboard.spec.ts",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-534dd7dd22def1ba0915",
+              "file": "dashboard.spec.ts",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com diferentes navegadores",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-384732ef3816bb0cdd5e",
+              "file": "dashboard.spec.ts",
+              "line": 115,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de dashboard corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4f0d07dfa917342af45f",
+              "file": "dashboard.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir as métricas principais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4ab003ef42abb11e838f",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve carregar os gráficos corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-7a511edd21859811a764",
+              "file": "dashboard.spec.ts",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "deve exibir o status do sistema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-1a70ab5460f5e25cb153",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "deve navegar para outras seções corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-0ced90504d250727475e",
+              "file": "dashboard.spec.ts",
+              "line": 59,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-c95c38822b3764ca7e6a",
+              "file": "dashboard.spec.ts",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar dados quando solicitado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-a826575290d65b2a2937",
+              "file": "dashboard.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "deve exibir dados recentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-8c01cda6940973657731",
+              "file": "dashboard.spec.ts",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-8e8a89732d855f6b4198",
+              "file": "dashboard.spec.ts",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com diferentes navegadores",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-1cb3c973e54e67de9d70",
+              "file": "dashboard.spec.ts",
+              "line": 115,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de dashboard corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-fae7ff1ee75b1c15abc5",
+              "file": "dashboard.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir as métricas principais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-65d46656f8d65bd39e13",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve carregar os gráficos corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-cc08bc07d0e425576176",
+              "file": "dashboard.spec.ts",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "deve exibir o status do sistema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-9ae98c003387e79973a2",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "deve navegar para outras seções corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-9e8a2708d5cd259b0a2d",
+              "file": "dashboard.spec.ts",
+              "line": 59,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-1cebfe187e6a4af47091",
+              "file": "dashboard.spec.ts",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar dados quando solicitado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5101ca12b9c150daef14",
+              "file": "dashboard.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "deve exibir dados recentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-e06028b40151a775eeb3",
+              "file": "dashboard.spec.ts",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5a3152733f3980577e34",
+              "file": "dashboard.spec.ts",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com diferentes navegadores",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-b7990908edf6eebbab42",
+              "file": "dashboard.spec.ts",
+              "line": 115,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de dashboard corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-90eb3432df87a15d984d",
+              "file": "dashboard.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir as métricas principais",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-0b6511ad234e3befcad7",
+              "file": "dashboard.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve carregar os gráficos corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-591d504c6a97147c0fcd",
+              "file": "dashboard.spec.ts",
+              "line": 40,
+              "column": 3
+            },
+            {
+              "title": "deve exibir o status do sistema",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-78a662195d4337e4cd0c",
+              "file": "dashboard.spec.ts",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "deve navegar para outras seções corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-21a18eda8ca25fd89e15",
+              "file": "dashboard.spec.ts",
+              "line": 59,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-3cb2b7412267e9b61b5f",
+              "file": "dashboard.spec.ts",
+              "line": 79,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar dados quando solicitado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-a86409b67973586c000f",
+              "file": "dashboard.spec.ts",
+              "line": 90,
+              "column": 3
+            },
+            {
+              "title": "deve exibir dados recentes",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-4d724c8e090fabfd4022",
+              "file": "dashboard.spec.ts",
+              "line": 99,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-b4fcdca932df656e1ee5",
+              "file": "dashboard.spec.ts",
+              "line": 104,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com diferentes navegadores",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-836b91e6a1669f4f80ce",
+              "file": "dashboard.spec.ts",
+              "line": 115,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Dashboard - Cenários de Erro",
+          "file": "dashboard.spec.ts",
+          "line": 125,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-ae1d108d22acdc01b9d8",
+              "file": "dashboard.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar offline",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-8883e9c43edfbee3b10a",
+              "file": "dashboard.spec.ts",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-5d5e26bf923b6d4f6f4e",
+              "file": "dashboard.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar offline",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-ca8ca891f615d950544d",
+              "file": "dashboard.spec.ts",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-72489f823477b122700b",
+              "file": "dashboard.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar offline",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-0bb25170fb3aece0609b",
+              "file": "dashboard.spec.ts",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-da456c360bc4dacc26c0",
+              "file": "dashboard.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar offline",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-f099f1390947f3983138",
+              "file": "dashboard.spec.ts",
+              "line": 151,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-f73647eeb669c21af5a3",
+              "file": "dashboard.spec.ts",
+              "line": 132,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar offline",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "90cda532ab82d274b30b-02963637ecde5692e8a2",
+              "file": "dashboard.spec.ts",
+              "line": 151,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "stations.spec.ts",
+      "file": "stations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Stations Page",
+          "file": "stations.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve carregar a página de estações corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-17fed82e7ae9296737a6",
+              "file": "stations.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir lista de estações com dados corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-f7749480cfbe4f3c49d1",
+              "file": "stations.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve permitir busca de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-81004987be0a2274f6fb",
+              "file": "stations.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "deve permitir filtrar estações por status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-dc43e6a38da74c34ce9d",
+              "file": "stations.spec.ts",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "deve abrir detalhes da estação ao clicar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-85ebb0c174664b2accfa",
+              "file": "stations.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "deve exibir detalhes corretos da estação",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-0327ec41de6bdfe22a4d",
+              "file": "stations.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar lista de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-d2cd58776b4dfe3b17b8",
+              "file": "stations.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-a16b9fc1de9e7a9291b1",
+              "file": "stations.spec.ts",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-2ea6f59d90abe7f866ad",
+              "file": "stations.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "deve exibir estações no mapa se disponível",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-c703f4b4063ed2a93f9b",
+              "file": "stations.spec.ts",
+              "line": 119,
+              "column": 3
+            },
+            {
+              "title": "deve permitir exportar dados das estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-5c6aec9339cf8694909c",
+              "file": "stations.spec.ts",
+              "line": 129,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de estações corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-5aab98ec080cdaadc454",
+              "file": "stations.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir lista de estações com dados corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-3bb8e0abbae0998eef28",
+              "file": "stations.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve permitir busca de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-0cd81a24190e089e9513",
+              "file": "stations.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "deve permitir filtrar estações por status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-9a13a44a169596d86885",
+              "file": "stations.spec.ts",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "deve abrir detalhes da estação ao clicar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-bbba74c58fc7c475eeca",
+              "file": "stations.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "deve exibir detalhes corretos da estação",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-c4137df3819910009061",
+              "file": "stations.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar lista de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-12fba09515479fd5daa1",
+              "file": "stations.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b807d41477db9ab1213f",
+              "file": "stations.spec.ts",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-738b979a0e72ad95f11b",
+              "file": "stations.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "deve exibir estações no mapa se disponível",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-4141a8a8759f0bdf15e9",
+              "file": "stations.spec.ts",
+              "line": 119,
+              "column": 3
+            },
+            {
+              "title": "deve permitir exportar dados das estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-80510923c52238ae4584",
+              "file": "stations.spec.ts",
+              "line": 129,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de estações corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-77f1432b39c8b5115983",
+              "file": "stations.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir lista de estações com dados corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-c0ad82a5e976db8aa9a9",
+              "file": "stations.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve permitir busca de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-f6ea8838d6340de06841",
+              "file": "stations.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "deve permitir filtrar estações por status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-781a06202a61c518a200",
+              "file": "stations.spec.ts",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "deve abrir detalhes da estação ao clicar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-c509cd8fc9e4b310fa7b",
+              "file": "stations.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "deve exibir detalhes corretos da estação",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-ea8ce59b8136e0e2d05c",
+              "file": "stations.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar lista de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-80e1d5f41e3c8a14ab06",
+              "file": "stations.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-802d464236530493e1c2",
+              "file": "stations.spec.ts",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-87623a1219a235a77ee0",
+              "file": "stations.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "deve exibir estações no mapa se disponível",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-d6f5a1ed743241e28453",
+              "file": "stations.spec.ts",
+              "line": 119,
+              "column": 3
+            },
+            {
+              "title": "deve permitir exportar dados das estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-c4288ec9bd500059669b",
+              "file": "stations.spec.ts",
+              "line": 129,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de estações corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-aea560123fc87b4d9b9c",
+              "file": "stations.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir lista de estações com dados corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-9b5dc873888c25c2ddc0",
+              "file": "stations.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve permitir busca de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-2d15fa827b7715286e40",
+              "file": "stations.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "deve permitir filtrar estações por status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-e8a00e8996057a221707",
+              "file": "stations.spec.ts",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "deve abrir detalhes da estação ao clicar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-8738ff9379023e6c5aa2",
+              "file": "stations.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "deve exibir detalhes corretos da estação",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-2202092cefeff40deb9f",
+              "file": "stations.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar lista de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-ff3e46929ea50bace4d3",
+              "file": "stations.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-44173b4dd76f3c4d56b0",
+              "file": "stations.spec.ts",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b45c932366407c78fa8d",
+              "file": "stations.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "deve exibir estações no mapa se disponível",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-25d0257bb12ab5ef830f",
+              "file": "stations.spec.ts",
+              "line": 119,
+              "column": 3
+            },
+            {
+              "title": "deve permitir exportar dados das estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-78491492d905fdf329af",
+              "file": "stations.spec.ts",
+              "line": 129,
+              "column": 3
+            },
+            {
+              "title": "deve carregar a página de estações corretamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-6ac16f37ad452c453838",
+              "file": "stations.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "deve exibir lista de estações com dados corretos",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-5a2cc8c3482f73e8edb1",
+              "file": "stations.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "deve permitir busca de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-46464e4a873ce8923dca",
+              "file": "stations.spec.ts",
+              "line": 33,
+              "column": 3
+            },
+            {
+              "title": "deve permitir filtrar estações por status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b7ae57db13c1880b046e",
+              "file": "stations.spec.ts",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "deve abrir detalhes da estação ao clicar",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-66fc983626711c6a6f53",
+              "file": "stations.spec.ts",
+              "line": 55,
+              "column": 3
+            },
+            {
+              "title": "deve exibir detalhes corretos da estação",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-2edbe9037c2d5ea0559e",
+              "file": "stations.spec.ts",
+              "line": 63,
+              "column": 3
+            },
+            {
+              "title": "deve atualizar lista de estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-bffb5f597b3a2d059599",
+              "file": "stations.spec.ts",
+              "line": 82,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar corretamente em dispositivos móveis",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-3787c1e46c48336fbee4",
+              "file": "stations.spec.ts",
+              "line": 97,
+              "column": 3
+            },
+            {
+              "title": "deve ter performance adequada",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b5ff1beaefcbf1a8dbb4",
+              "file": "stations.spec.ts",
+              "line": 108,
+              "column": 3
+            },
+            {
+              "title": "deve exibir estações no mapa se disponível",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-0efea688dd48558aab33",
+              "file": "stations.spec.ts",
+              "line": 119,
+              "column": 3
+            },
+            {
+              "title": "deve permitir exportar dados das estações",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-bfc05c2f2aa45b5ce8f4",
+              "file": "stations.spec.ts",
+              "line": 129,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Stations - Cenários de Erro",
+          "file": "stations.spec.ts",
+          "line": 142,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve lidar com busca sem resultados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-0ae11545972cc14d98f5",
+              "file": "stations.spec.ts",
+              "line": 149,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-47c7b53f8635d12c33d9",
+              "file": "stations.spec.ts",
+              "line": 162,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com dados limitados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-ccc8c77167ba62755516",
+              "file": "stations.spec.ts",
+              "line": 178,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com busca sem resultados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-97a3103731b064f02b91",
+              "file": "stations.spec.ts",
+              "line": 149,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-f0f748461b796170db2e",
+              "file": "stations.spec.ts",
+              "line": 162,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com dados limitados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-48bf12c050c360e67097",
+              "file": "stations.spec.ts",
+              "line": 178,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com busca sem resultados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b04790a225b9a021bde8",
+              "file": "stations.spec.ts",
+              "line": 149,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-3b180cd7a2248904f6b4",
+              "file": "stations.spec.ts",
+              "line": 162,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com dados limitados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-9a292548094e7e498978",
+              "file": "stations.spec.ts",
+              "line": 178,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com busca sem resultados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-aff8cf0c925c11402403",
+              "file": "stations.spec.ts",
+              "line": 149,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-e59499b6a553075c5799",
+              "file": "stations.spec.ts",
+              "line": 162,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com dados limitados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-5cdbe40435f65b1e4961",
+              "file": "stations.spec.ts",
+              "line": 178,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com busca sem resultados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b600905973b6cd762a3e",
+              "file": "stations.spec.ts",
+              "line": 149,
+              "column": 3
+            },
+            {
+              "title": "deve lidar com falhas de API graciosamente",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-ebc6dd87d273684525a8",
+              "file": "stations.spec.ts",
+              "line": 162,
+              "column": 3
+            },
+            {
+              "title": "deve funcionar com dados limitados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-9d8f49cfc1df9dbc8e71",
+              "file": "stations.spec.ts",
+              "line": 178,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Stations - Acessibilidade",
+          "file": "stations.spec.ts",
+          "line": 196,
+          "column": 6,
+          "specs": [
+            {
+              "title": "deve ter navegação por teclado funcionando",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-7f489d5232289fa91aad",
+              "file": "stations.spec.ts",
+              "line": 204,
+              "column": 3
+            },
+            {
+              "title": "deve ter contraste adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-f1c9ae47d86b5e05dc65",
+              "file": "stations.spec.ts",
+              "line": 213,
+              "column": 3
+            },
+            {
+              "title": "deve ter labels apropriados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-570e359b1055e1a6fdf4",
+              "file": "stations.spec.ts",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "deve ter navegação por teclado funcionando",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-000287909887609dc12a",
+              "file": "stations.spec.ts",
+              "line": 204,
+              "column": 3
+            },
+            {
+              "title": "deve ter contraste adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-c61d1e88215d67097f77",
+              "file": "stations.spec.ts",
+              "line": 213,
+              "column": 3
+            },
+            {
+              "title": "deve ter labels apropriados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-7189607ae03f021cfcd8",
+              "file": "stations.spec.ts",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "deve ter navegação por teclado funcionando",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-e3d282ea89c04f40a8bb",
+              "file": "stations.spec.ts",
+              "line": 204,
+              "column": 3
+            },
+            {
+              "title": "deve ter contraste adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-1a1d4cfcbd9ea41ffd12",
+              "file": "stations.spec.ts",
+              "line": 213,
+              "column": 3
+            },
+            {
+              "title": "deve ter labels apropriados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-757afc03f14c67993304",
+              "file": "stations.spec.ts",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "deve ter navegação por teclado funcionando",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-700dfd7caa61a0ed40a5",
+              "file": "stations.spec.ts",
+              "line": 204,
+              "column": 3
+            },
+            {
+              "title": "deve ter contraste adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b7f1bfc3f630d09cc80d",
+              "file": "stations.spec.ts",
+              "line": 213,
+              "column": 3
+            },
+            {
+              "title": "deve ter labels apropriados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Chrome",
+                  "projectName": "Mobile Chrome",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-56dcbb75e78022278ded",
+              "file": "stations.spec.ts",
+              "line": 219,
+              "column": 3
+            },
+            {
+              "title": "deve ter navegação por teclado funcionando",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-ba526036cf4172262825",
+              "file": "stations.spec.ts",
+              "line": 204,
+              "column": 3
+            },
+            {
+              "title": "deve ter contraste adequado",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-b51bb3e69ace001d8ee7",
+              "file": "stations.spec.ts",
+              "line": 213,
+              "column": 3
+            },
+            {
+              "title": "deve ter labels apropriados",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "eb2ad51e734e6eca5859-8cf2faa351d35569653b",
+              "file": "stations.spec.ts",
+              "line": 219,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-20T20:14:36.644Z",
+    "duration": 581.4179999999999,
+    "expected": 0,
+    "skipped": 230,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

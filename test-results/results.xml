@@ -1,0 +1,952 @@
+<testsuites id="" name="" tests="230" failures="0" skipped="230" errors="0" time="0.5814179999999999">
+<testsuite name="api.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="chromium" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="API Endpoints › Health Check deve retornar status 200" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de estações deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de dados hidrológicos deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de análises deve retornar estatísticas válidas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar CORS headers corretos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter rate limiting adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar erro 404 para endpoints inexistentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar dados em formato JSON" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter tempo de resposta adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve funcionar com diferentes métodos HTTP" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve validar parâmetros de entrada" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve suportar múltiplas requisições concorrentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve ter tempo de resposta consistente" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve funcionar com payloads grandes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve rejeitar requisições maliciosas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve validar headers de segurança" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve funcionar apenas com métodos permitidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="chromium" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Dashboard Page › deve carregar a página de dashboard corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir as métricas principais" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve carregar os gráficos corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir o status do sistema" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve navegar para outras seções corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar corretamente em dispositivos móveis" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve atualizar dados quando solicitado" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir dados recentes" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve ter performance adequada" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar com diferentes navegadores" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve funcionar offline" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="stations.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="chromium" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="Stations Page › deve carregar a página de estações corretamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir lista de estações com dados corretos" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir busca de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir filtrar estações por status" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve abrir detalhes da estação ao clicar" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir detalhes corretos da estação" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve atualizar lista de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve funcionar corretamente em dispositivos móveis" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve ter performance adequada" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir estações no mapa se disponível" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir exportar dados das estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com busca sem resultados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve funcionar com dados limitados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter navegação por teclado funcionando" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter contraste adequado" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter labels apropriados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="api.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="firefox" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="API Endpoints › Health Check deve retornar status 200" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de estações deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de dados hidrológicos deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de análises deve retornar estatísticas válidas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar CORS headers corretos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter rate limiting adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar erro 404 para endpoints inexistentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar dados em formato JSON" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter tempo de resposta adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve funcionar com diferentes métodos HTTP" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve validar parâmetros de entrada" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve suportar múltiplas requisições concorrentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve ter tempo de resposta consistente" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve funcionar com payloads grandes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve rejeitar requisições maliciosas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve validar headers de segurança" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve funcionar apenas com métodos permitidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="firefox" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Dashboard Page › deve carregar a página de dashboard corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir as métricas principais" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve carregar os gráficos corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir o status do sistema" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve navegar para outras seções corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar corretamente em dispositivos móveis" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve atualizar dados quando solicitado" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir dados recentes" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve ter performance adequada" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar com diferentes navegadores" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve funcionar offline" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="stations.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="firefox" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="Stations Page › deve carregar a página de estações corretamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir lista de estações com dados corretos" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir busca de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir filtrar estações por status" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve abrir detalhes da estação ao clicar" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir detalhes corretos da estação" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve atualizar lista de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve funcionar corretamente em dispositivos móveis" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve ter performance adequada" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir estações no mapa se disponível" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir exportar dados das estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com busca sem resultados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve funcionar com dados limitados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter navegação por teclado funcionando" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter contraste adequado" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter labels apropriados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="api.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="webkit" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="API Endpoints › Health Check deve retornar status 200" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de estações deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de dados hidrológicos deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de análises deve retornar estatísticas válidas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar CORS headers corretos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter rate limiting adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar erro 404 para endpoints inexistentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar dados em formato JSON" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter tempo de resposta adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve funcionar com diferentes métodos HTTP" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve validar parâmetros de entrada" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve suportar múltiplas requisições concorrentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve ter tempo de resposta consistente" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve funcionar com payloads grandes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve rejeitar requisições maliciosas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve validar headers de segurança" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve funcionar apenas com métodos permitidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="webkit" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Dashboard Page › deve carregar a página de dashboard corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir as métricas principais" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve carregar os gráficos corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir o status do sistema" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve navegar para outras seções corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar corretamente em dispositivos móveis" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve atualizar dados quando solicitado" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir dados recentes" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve ter performance adequada" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar com diferentes navegadores" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve funcionar offline" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="stations.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="webkit" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="Stations Page › deve carregar a página de estações corretamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir lista de estações com dados corretos" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir busca de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir filtrar estações por status" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve abrir detalhes da estação ao clicar" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir detalhes corretos da estação" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve atualizar lista de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve funcionar corretamente em dispositivos móveis" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve ter performance adequada" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir estações no mapa se disponível" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir exportar dados das estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com busca sem resultados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve funcionar com dados limitados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter navegação por teclado funcionando" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter contraste adequado" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter labels apropriados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="api.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="Mobile Chrome" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="API Endpoints › Health Check deve retornar status 200" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de estações deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de dados hidrológicos deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de análises deve retornar estatísticas válidas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar CORS headers corretos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter rate limiting adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar erro 404 para endpoints inexistentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar dados em formato JSON" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter tempo de resposta adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve funcionar com diferentes métodos HTTP" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve validar parâmetros de entrada" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve suportar múltiplas requisições concorrentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve ter tempo de resposta consistente" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve funcionar com payloads grandes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve rejeitar requisições maliciosas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve validar headers de segurança" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve funcionar apenas com métodos permitidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="Mobile Chrome" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Dashboard Page › deve carregar a página de dashboard corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir as métricas principais" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve carregar os gráficos corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir o status do sistema" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve navegar para outras seções corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar corretamente em dispositivos móveis" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve atualizar dados quando solicitado" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir dados recentes" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve ter performance adequada" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar com diferentes navegadores" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve funcionar offline" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="stations.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="Mobile Chrome" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="Stations Page › deve carregar a página de estações corretamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir lista de estações com dados corretos" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir busca de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir filtrar estações por status" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve abrir detalhes da estação ao clicar" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir detalhes corretos da estação" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve atualizar lista de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve funcionar corretamente em dispositivos móveis" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve ter performance adequada" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir estações no mapa se disponível" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir exportar dados das estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com busca sem resultados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve funcionar com dados limitados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter navegação por teclado funcionando" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter contraste adequado" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter labels apropriados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="api.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="Mobile Safari" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="API Endpoints › Health Check deve retornar status 200" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de estações deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de dados hidrológicos deve retornar dados válidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API de análises deve retornar estatísticas válidas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar CORS headers corretos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter rate limiting adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar erro 404 para endpoints inexistentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve retornar dados em formato JSON" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve ter tempo de resposta adequado" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve funcionar com diferentes métodos HTTP" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API Endpoints › API deve validar parâmetros de entrada" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve suportar múltiplas requisições concorrentes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve ter tempo de resposta consistente" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Performance e Estresse › API deve funcionar com payloads grandes" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve rejeitar requisições maliciosas" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve validar headers de segurança" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="API - Segurança › API deve funcionar apenas com métodos permitidos" classname="api.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="dashboard.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="Mobile Safari" tests="12" failures="0" skipped="12" time="0" errors="0">
+<testcase name="Dashboard Page › deve carregar a página de dashboard corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir as métricas principais" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve carregar os gráficos corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir o status do sistema" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve navegar para outras seções corretamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar corretamente em dispositivos móveis" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve atualizar dados quando solicitado" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve exibir dados recentes" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve ter performance adequada" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard Page › deve funcionar com diferentes navegadores" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Dashboard - Cenários de Erro › deve funcionar offline" classname="dashboard.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="stations.spec.ts" timestamp="2025-09-20T20:14:37.217Z" hostname="Mobile Safari" tests="17" failures="0" skipped="17" time="0" errors="0">
+<testcase name="Stations Page › deve carregar a página de estações corretamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir lista de estações com dados corretos" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir busca de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir filtrar estações por status" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve abrir detalhes da estação ao clicar" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir detalhes corretos da estação" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve atualizar lista de estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve funcionar corretamente em dispositivos móveis" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve ter performance adequada" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve exibir estações no mapa se disponível" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations Page › deve permitir exportar dados das estações" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com busca sem resultados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve lidar com falhas de API graciosamente" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Cenários de Erro › deve funcionar com dados limitados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter navegação por teclado funcionando" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter contraste adequado" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Stations - Acessibilidade › deve ter labels apropriados" classname="stations.spec.ts" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>
