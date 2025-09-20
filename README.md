@@ -593,17 +593,6 @@ npm test
 
 ---
 
-## 🙏 Agradecimentos
-
-### 🏛️ **Instituições**
-- **ANA (Agência Nacional de Águas)** - Pela disponibilização da API oficial
-- **UFMG** - Pelo apoio técnico e científico
-- **Vale do Aço** - Pela relevância regional do projeto
-
-### 👥 **Pessoas**
-- **Prof. Dr. João Silva** - Orientação acadêmica
-- **Eng. Maria Santos** - Consultoria hidrológica
-- **Dev. Pedro Costa** - Contribuições técnicas
 
 ### 🛠️ **Ferramentas e Bibliotecas**
 - **Laravel Framework** - Base sólida para o desenvolvimento
@@ -616,21 +605,12 @@ npm test
 
 ## 📞 Contato
 
-### 👨‍💻 **Desenvolvedor Principal**
-**Wilker José da Cruz Pimenta**
-- 📧 **Email**: wilker.pimenta@email.com
-- 💼 **LinkedIn**: [Wilker Pimenta](https://linkedin.com/in/wilker-pimenta)
+### 👨‍💻 **Desenvolvedor**
+**Wilker Junio Coelho Pimenta**
+- 📧 **Email**: wiljcpimenta@email.com
+- 💼 **LinkedIn**: [Wilker Pimenta](https://linkedin.com/in/wilker-j-c-pimenta)
 - 🐙 **GitHub**: [@Wil-JC-Pimenta](https://github.com/Wil-JC-Pimenta)
-- 🌐 **Portfolio**: [wilkerpimenta.dev](https://wilkerpimenta.dev)
-
-### 🏢 **Organização**
-- **🏫 Universidade**: Universidade Federal de Minas Gerais (UFMG)
-- **🎓 Curso**: Engenharia de Sistemas
-- **📍 Localização**: Belo Horizonte, MG - Brasil
-
-### 📱 **Redes Sociais**
-- **🐦 Twitter**: [@WilkerPimenta](https://twitter.com/WilkerPimenta)
-- **📸 Instagram**: [@wilker.pimenta](https://instagram.com/wilker.pimenta)
+- 🌐 **Portfolio**: [wilkerpimenta.dev](https://wilker-pimenta.vercel.app/)
 
 ---
 
@@ -664,17 +644,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### ✅ **Você pode:**
-- ✅ Usar comercialmente
-- ✅ Modificar e distribuir
-- ✅ Usar em projetos privados
-- ✅ Vender o software
-
-### ❌ **Você não pode:**
-- ❌ Ser responsabilizado por danos
-- ❌ Garantir que o software funcione
-
----
 
 ## 🏆 Status do Projeto
 
@@ -684,7 +653,7 @@ SOFTWARE.
 ![GitHub stars](https://img.shields.io/github/stars/Wil-JC-Pimenta/monitor-rio)
 
 ### 📊 **Métricas do Projeto**
-- **📅 Última Atualização**: Setembro 2024
+- **📅 Última Atualização**: Setembro 2025
 - **🔢 Versão Atual**: 1.3.0
 - **📈 Status**: Ativo e em desenvolvimento
 - **🎯 Próximos Passos**: Deploy em produção e monitoramento avançado
